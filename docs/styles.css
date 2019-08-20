@@ -1,1 +1,33 @@
 @charset 'UTF-8';
+
+html,
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    width: 10%;
+}
+
+.nav {
+    width: 10%;
+    float: right;
+    text-align: right;
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav:hover {
+
+}
+
+.nav.top {
+    
+}
+
+.nav.bottom {
+    
+}
