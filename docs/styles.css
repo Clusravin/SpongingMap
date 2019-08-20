@@ -1,5 +1,11 @@
 @charset 'UTF-8';
 
+@font-face {
+    font-family: '焦糖奶茶';
+    src: url('焦糖奶茶.eot');
+    src: local('焦糖奶茶 Regular'), local('焦糖奶茶'), url('焦糖奶茶.woff') format('woff'), url('焦糖奶茶.ttf') format('truetype'), url('焦糖奶茶.svg#焦糖奶茶') format('svg');
+}  
+
 html,
 html * {
     margin: 0;
@@ -9,6 +15,12 @@ html * {
 .title {
     width: 10%;
     float: left;
+}
+
+.title h1 {
+    writing-mode: tb-rl;
+    font-family: "焦糖奶茶";
+    font-size: 4em;
 }
 
 .nav {
@@ -22,18 +34,18 @@ html * {
 }
 
 .nav a {
-    color: #000;
+    font-size: 2em;
     text-decoration: none;
 }
 
-.nav a:hover {
+.nav.top a {
+    color: #000;
+}
+
+.nav.bottom a {
     color: #555;
 }
 
-.nav.top {
-    
-}
-
-.nav.bottom {
-    
+.nav a:hover {
+    color: #999;
 }
