@@ -8,10 +8,11 @@ html * {
 
 .title {
     width: 10%;
+    float: left;
 }
 
 .nav {
-    width: 10%;
+    width: 50%;
     float: right;
     text-align: right;
 }
