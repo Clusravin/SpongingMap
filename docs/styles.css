@@ -21,8 +21,13 @@ html * {
     list-style-type: none;
 }
 
-.nav:hover {
+.nav a {
+    color: #000;
+    text-decoration: none;
+}
 
+.nav a:hover {
+    color: #555;
 }
 
 .nav.top {
