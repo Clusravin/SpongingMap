@@ -2,8 +2,7 @@
 
 @font-face {
     font-family: '焦糖奶茶';
-    src: url('焦糖奶茶.eot');
-    src: local('焦糖奶茶 Regular'), local('焦糖奶茶'), url('焦糖奶茶.woff') format('woff'), url('焦糖奶茶.ttf') format('truetype'), url('焦糖奶茶.svg#焦糖奶茶') format('svg');
+    src: local('焦糖奶茶'), url('fonts/焦糖奶茶.woff') format('woff'), url('fonts/焦糖奶茶.ttf') format('truetype'), url('fonts/焦糖奶茶.svg#焦糖奶茶') format('svg');
 }  
 
 html,
@@ -34,6 +33,7 @@ html * {
 }
 
 .nav a {
+    font-family: "焦糖奶茶";
     font-size: 2em;
     text-decoration: none;
 }
