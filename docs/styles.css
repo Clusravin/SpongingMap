@@ -12,19 +12,21 @@ html * {
 }
 
 .title {
-    width: 10%;
+    width: 20%;
     float: left;
+    padding: 4em 2em;
 }
 
 .title h1 {
     writing-mode: tb-rl;
     font-family: "焦糖奶茶";
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .nav {
     width: 50%;
     float: right;
+    padding: 4em 2em;
     text-align: right;
 }
 
