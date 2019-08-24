@@ -29,53 +29,65 @@ html {
     grid-template-columns: 2fr 7fr;
     grid-template-areas: 'h m' 'h f';
     align-items: center; }
-    html .home .header {
+    html .home header {
       grid-area: h;
       margin: auto; }
-      html .home .header .title {
+      html .home header .title {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'a b'; }
-        html .home .header .title .a {
+        html .home header .title .a {
           grid-area: a;
           padding-bottom: 10rem; }
-        html .home .header .title .b {
+        html .home header .title .b {
           grid-area: b;
           padding-top: 10rem; }
-    html .home .main {
+    html .home main {
       grid-area: m;
       display: grid;
       grid-template-columns: 5fr 2fr;
       grid-template-areas: 'm w'; }
-      html .home .main .map {
+      html .home main .map {
         grid-area: m; }
-        html .home .main .map img {
+        html .home main .map img {
           width: 90%;
           margin: 5%; }
-      html .home .main .wormhole-link {
+      html .home main .wormhole-link {
         grid-area: w; }
-        html .home .main .wormhole-link img {
+        html .home main .wormhole-link img {
           width: 50%;
           margin: 25% 15%; }
-    html .home .footer {
+    html .home footer {
       grid-area: f;
       margin-bottom: 1.5rem;
       display: grid;
       grid-template-areas: 'h p g';
       justify-content: end; }
-      html .home .footer .help {
+      html .home footer .help {
         grid-area: h;
         padding: 0.25rem;
         margin-right: 1.5rem; }
-      html .home .footer .people-link {
+      html .home footer .people-link {
         grid-area: p;
         padding: 0.25rem; }
-      html .home .footer .github-link {
+      html .home footer .github-link {
         grid-area: g;
         padding: 0.25rem;
         margin-right: 0.5rem; }
-      html .home .footer img {
+      html .home footer img {
         width: 1.5rem;
         height: 1.5rem; }
+  html .room {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-areas: 't m'; }
+    html .room header {
+      grid-area: t; }
+      html .room header .title {
+        margin: 2rem 0rem 0rem 2rem; }
+    html .room main {
+      grid-area: m; }
+      html .room main .main-text {
+        margin: 1.5rem 2rem 2rem 0rem; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -50,7 +50,7 @@ html {
         'h f';
         align-items: center;
 
-        .header {
+        header {
             grid-area: h;
 
             margin: auto;
@@ -75,7 +75,7 @@ html {
             }
         }
 
-        .main {
+        main {
             grid-area: m;
 
             display: grid;
@@ -102,7 +102,7 @@ html {
             }
         }
 
-        .footer {
+        footer {
             $icon-size: 1.5rem;
             $icon-padding: 0.25rem;
 
@@ -138,6 +138,29 @@ html {
             img {
                 width: $icon-size;
                 height: $icon-size;
+            }
+        }
+    }
+
+    .room {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        grid-template-areas:
+        't m';
+
+        header {
+            grid-area: t;
+            // background-color: #ccc;
+            .title {
+                margin: 2rem 0rem 0rem 2rem;
+            }
+        }
+
+        main {
+            grid-area: m;
+
+            .main-text {
+                margin: 1.5rem 2rem 2rem 0rem;
             }
         }
     }
