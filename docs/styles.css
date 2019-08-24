@@ -3,12 +3,7 @@
 @font-face {
     font-family: '焦糖奶茶';
     src: local('焦糖奶茶'), url('fonts/焦糖奶茶.ttf') format('truetype');
-}  
-
-@font-face {
-    font-family: 'Space Age';
-    src: local('Space Age'), url('fonts/Space Age.ttf') format('truetype');
-}  
+}
 
 html,
 html * {
@@ -18,48 +13,84 @@ html * {
 }
 
 h1 {
+    writing-mode: tb-rl;
     font-size: 5em;
 }
 
-.title {
-    width: 20%;
-    float: left;
-    margin: 4em 2em;
-}
-
-.title h1 {
+h2 {
     writing-mode: tb-rl;
+    font-size: 4em;
 }
 
-.nav {
-    width: 50%;
-    float: right;
-    margin: 4em 2em;
-    text-align: right;
-}
-
-.nav ul {
-    list-style-type: none;
-}
-
-.nav a {
+p {
     font-size: 2em;
+}
+
+a {
     text-decoration: none;
 }
 
-.nav.top a {
-    color: #000;
+.home {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
 }
 
-.nav.bottom a {
-    color: #555;
+.home .header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
 }
 
-.nav a:hover {
-    color: #999;
+.home .main {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
-.error h1 {
-    font-family: "Space Age";
-    font-size: 5em;
+.home .footer {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.home .header .title {
+    grid-row: 1 / 2; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.home .header .people-link {
+    grid-row: 2 / 3;
+}
+
+.home .main .map {
+    grid-column: 1 / 2;
+}
+
+.home .main .wormhole-link {
+    grid-column: 2 / 3;
+}
+
+.home .footer .help {
+    grid-row: 1 / 2;
+}
+
+.home .footer .github-link {
+    grid-row: 3 / 4;
+}
+
+.home .header .title .a {
+    grid-column: 1 / 2;
+}
+
+.home .header .title .b {
+    grid-column: 2 / 3;
+}
+
+.title a, h1{
+    color: #FFFFFF;
 }
