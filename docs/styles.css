@@ -1,96 +1,81 @@
-@charset 'UTF-8';
-
+@charset "UTF-8";
 @font-face {
-    font-family: '焦糖奶茶';
-    src: local('焦糖奶茶'), url('fonts/焦糖奶茶.ttf') format('truetype');
-}
-
-html,
-html * {
+  font-family: '焦糖奶茶';
+  src: local("焦糖奶茶"), url("fonts/焦糖奶茶.ttf") format("truetype"); }
+html {
+  margin: 1rem;
+  padding: 0;
+  background-color: #000; }
+  html * {
     margin: 0;
     padding: 0;
-    font-family: "焦糖奶茶";
-}
-
-h1 {
-    writing-mode: tb-rl;
-    font-size: 5em;
-}
-
-h2 {
+    font-family: "焦糖奶茶"; }
+  html h1 {
     writing-mode: tb-rl;
     font-size: 4em;
-}
-
-p {
+    color: #ffffff; }
+  html h2 {
+    writing-mode: tb-rl;
+    font-size: 3em;
+    color: #ffffff; }
+  html p {
     font-size: 2em;
-}
-
-a {
+    color: #ffffff; }
+  html a {
     text-decoration: none;
-}
-
-.home {
+    color: #ffffff; }
+  html .home {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
-}
+    grid-template-columns: 2fr 7fr;
+    grid-template-areas: 'h m' 'h f';
+    align-items: center; }
+    html .home .header {
+      grid-area: h;
+      margin: auto; }
+      html .home .header .title {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'a b'; }
+        html .home .header .title .a {
+          grid-area: a;
+          padding-bottom: 10rem; }
+        html .home .header .title .b {
+          grid-area: b;
+          padding-top: 10rem; }
+    html .home .main {
+      grid-area: m;
+      display: grid;
+      grid-template-columns: 5fr 2fr;
+      grid-template-areas: 'm w'; }
+      html .home .main .map {
+        grid-area: m; }
+        html .home .main .map img {
+          width: 90%;
+          margin: 5%; }
+      html .home .main .wormhole-link {
+        grid-area: w; }
+        html .home .main .wormhole-link img {
+          width: 50%;
+          margin: 25% 15%; }
+    html .home .footer {
+      grid-area: f;
+      margin-bottom: 1.5rem;
+      display: grid;
+      grid-template-areas: 'h p g';
+      justify-content: end; }
+      html .home .footer .help {
+        grid-area: h;
+        padding: 0.25rem;
+        margin-right: 1.5rem; }
+      html .home .footer .people-link {
+        grid-area: p;
+        padding: 0.25rem; }
+      html .home .footer .github-link {
+        grid-area: g;
+        padding: 0.25rem;
+        margin-right: 0.5rem; }
+      html .home .footer img {
+        width: 1.5rem;
+        height: 1.5rem; }
 
-.home .header {
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
-    display: grid;
-    grid-template-rows: 3fr 1fr;
-}
-
-.home .main {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
-.home .footer {
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
-    display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-}
-
-.home .header .title {
-    grid-row: 1 / 2; 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.home .header .people-link {
-    grid-row: 2 / 3;
-}
-
-.home .main .map {
-    grid-column: 1 / 2;
-}
-
-.home .main .wormhole-link {
-    grid-column: 2 / 3;
-}
-
-.home .footer .help {
-    grid-row: 1 / 2;
-}
-
-.home .footer .github-link {
-    grid-row: 3 / 4;
-}
-
-.home .header .title .a {
-    grid-column: 1 / 2;
-}
-
-.home .header .title .b {
-    grid-column: 2 / 3;
-}
-
-.title a, h1{
-    color: #FFFFFF;
-}
+/*# sourceMappingURL=styles.css.map */

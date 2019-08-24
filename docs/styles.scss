@@ -1,0 +1,144 @@
+@charset 'UTF-8';
+
+@font-face {
+    font-family: '焦糖奶茶';
+    src: local('焦糖奶茶'), url('fonts/焦糖奶茶.ttf') format('truetype');
+}
+
+$light: #ffffff;
+
+html {
+    margin: 1rem;
+    padding: 0;
+
+    background-color: #000;
+    
+    * {
+        margin: 0;
+        padding: 0;
+
+        font-family: "焦糖奶茶";
+    }
+
+    h1 {
+        writing-mode: tb-rl;
+        font-size: 4em;
+        color: $light;
+    }
+    
+    h2 {
+        writing-mode: tb-rl;
+        font-size: 3em;
+        color: $light;
+    }
+    
+    p {
+        font-size: 2em;
+        color: $light;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $light;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+        grid-template-areas: 
+        'h m'
+        'h f';
+        align-items: center;
+
+        .header {
+            grid-area: h;
+
+            margin: auto;
+
+            .title {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                'a b';
+                
+                .a {
+                    grid-area: a;
+
+                    padding-bottom: 10rem;
+                }
+
+                .b {
+                    grid-area: b;
+
+                    padding-top: 10rem;
+                }
+            }
+        }
+
+        .main {
+            grid-area: m;
+
+            display: grid;
+            grid-template-columns: 5fr 2fr;
+            grid-template-areas:
+            'm w';
+
+            .map {
+                grid-area: m;
+
+                img {
+                    width: 90%;
+                    margin: 5%;
+                }
+            }
+
+            .wormhole-link {
+                grid-area: w;
+
+                img {
+                    width: 50%;
+                    margin: 25% 15%;
+                }
+            }
+        }
+
+        .footer {
+            $icon-size: 1.5rem;
+            $icon-padding: 0.25rem;
+
+            grid-area: f;
+
+            margin-bottom: 1.5rem;
+
+            display: grid;
+            grid-template-areas: 
+            'h p g';
+            justify-content: end;
+
+            .help {
+                grid-area: h;
+
+                padding: $icon-padding;
+                margin-right: 1.5rem;
+            }
+
+            .people-link {
+                grid-area: p;
+
+                padding: $icon-padding;
+            }
+
+            .github-link {
+                grid-area: g;
+
+                padding: $icon-padding;
+                margin-right: 0.5rem;
+            }
+
+            img {
+                width: $icon-size;
+                height: $icon-size;
+            }
+        }
+    }
+}
