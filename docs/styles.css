@@ -3,9 +3,8 @@
   font-family: '焦糖奶茶';
   src: local("焦糖奶茶"), url("fonts/焦糖奶茶.ttf") format("truetype"); }
 html {
-  margin: 1rem;
-  padding: 0;
-  background-color: #000; }
+  margin: 0;
+  padding: 0; }
   html * {
     margin: 0;
     padding: 0;
@@ -32,6 +31,7 @@ html {
     text-decoration: none;
     color: #ffffff; }
   html .home {
+    background-image: url("images/sky.svg");
     display: grid;
     grid-template-columns: 2fr 7fr;
     grid-template-areas: 'h m' 'h f';
@@ -96,7 +96,7 @@ html {
               margin: 0% 10%; } }
     html .home footer {
       grid-area: f;
-      margin-bottom: 1.5rem;
+      margin: 0rem 1.5rem 1.5rem 0rem;
       display: grid;
       grid-template-areas: 'h p g';
       justify-content: end; }
