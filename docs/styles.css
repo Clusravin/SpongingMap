@@ -34,7 +34,7 @@ html {
   html .home {
     display: grid;
     grid-template-columns: 2fr 7fr;
-    grid-template-areas: 'h m' 'f f';
+    grid-template-areas: 'h m' 'h f';
     align-items: center; }
     @media (max-width: 1000px) {
       html .home {

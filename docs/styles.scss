@@ -6,7 +6,6 @@
 }
 
 html {
-    $light: #ffffff;
     $mobile-max-width: 600px;
     $tablet-max-width: 1000px;
 
@@ -25,7 +24,7 @@ html {
     h1 {
         writing-mode: tb-rl;
         font-size: 4em;
-        color: $light;
+        color: #ffffff;
 
         @media (max-width: $tablet-max-width) {
             writing-mode: lr-tb;
@@ -36,7 +35,7 @@ html {
     h2 {
         writing-mode: tb-rl;
         font-size: 3em;
-        color: $light;
+        color: #ffffff;
 
         @media (max-width: $tablet-max-width) {
             writing-mode: lr-tb;
@@ -45,12 +44,12 @@ html {
     
     p {
         font-size: 2em;
-        color: $light;
+        color: #ffffff;
     }
     
     a {
         text-decoration: none;
-        color: $light;
+        color: #ffffff;
     }
 
     .home {
@@ -58,7 +57,7 @@ html {
         grid-template-columns: 2fr 7fr;
         grid-template-areas: 
         'h m'
-        'f f';
+        'h f';
         align-items: center;
 
         @media (max-width: $tablet-max-width) {
