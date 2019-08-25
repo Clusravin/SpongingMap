@@ -4,7 +4,8 @@
   src: local("焦糖奶茶"), url("fonts/焦糖奶茶.ttf") format("truetype"); }
 html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-image: url("images/sky.svg"); }
   html * {
     margin: 0;
     padding: 0;
@@ -31,7 +32,6 @@ html {
     text-decoration: none;
     color: #ffffff; }
   html .home {
-    background-image: url("images/sky.svg");
     display: grid;
     grid-template-columns: 2fr 7fr;
     grid-template-areas: 'h m' 'h f';

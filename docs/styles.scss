@@ -12,6 +12,8 @@ html {
 
     margin: 0;
     padding: 0;
+
+    background-image: url("images/sky.svg");
     
     * {
         margin: 0;
@@ -52,8 +54,6 @@ html {
     }
 
     .home {
-        background-image: url("images/sky.svg");
-
         display: grid;
         grid-template-columns: 2fr 7fr;
         grid-template-areas: 
