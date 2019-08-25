@@ -1,0 +1,14 @@
+<svg width="678px" height="678px" viewBox="0 0 678 678" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
+            <stop stop-color="#005493" offset="0%"></stop>
+            <stop stop-color="#0279D4" offset="74.7222724%"></stop>
+            <stop stop-color="#3CA9FF" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-381.000000, -173.000000)" fill="url(#radialGradient-1)">
+            <circle id="Oval" cx="720" cy="512" r="339"></circle>
+        </g>
+    </g>
+</svg>
