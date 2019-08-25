@@ -58,7 +58,7 @@ html {
         grid-template-columns: 2fr 7fr;
         grid-template-areas: 
         'h m'
-        'h f';
+        'f f';
         align-items: center;
 
         @media (max-width: $tablet-max-width) {
@@ -81,7 +81,6 @@ html {
             grid-area: h;
 
             margin: auto;
-            // background-color: #111;
 
             .title {
                 display: grid;
@@ -96,7 +95,6 @@ html {
                     'a'
                     'b';
                 }
-                // background-color: #222;
                 
                 .a {
                     grid-area: a;
@@ -106,7 +104,6 @@ html {
                     @media (max-width: $tablet-max-width) {
                         padding: 0;
                     }
-                    // background-color: #333;
                 }
 
                 .b {
@@ -121,7 +118,6 @@ html {
                     @media (max-width: $mobile-max-width) {
                         padding: 0rem 1.5rem;
                     }
-                    // background-color: #444;
                 }
             }
         }
@@ -136,26 +132,22 @@ html {
 
             @media (max-width: $tablet-max-width) {
                 grid-template-columns: 1fr;
-                // grid-template-rows: 5fr 2fr;
                 grid-template-areas:
                 'm'
                 'w';
             }
-            // background-color: #555;
 
             .map {
                 grid-area: m;
-                // background-color: #666;
 
                 img {
                     width: 90%;
-                    margin: 5%;
+                    margin: 5% 5% 0% 5%;
                 }
             }
 
             .wormhole-link {
                 grid-area: w;
-                // background-color: #777;
 
                 img {
                     width: 50%;
@@ -181,7 +173,6 @@ html {
             grid-template-areas: 
             'h p g';
             justify-content: end;
-            // background-color: #888;
 
             .help {
                 grid-area: h;
@@ -226,7 +217,6 @@ html {
 
         header {
             grid-area: t;
-            // background-color: #ccc;
             .title {
                 margin: 2rem 0rem 0rem 2rem;
             }

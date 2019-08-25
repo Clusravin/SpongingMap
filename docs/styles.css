@@ -34,7 +34,7 @@ html {
   html .home {
     display: grid;
     grid-template-columns: 2fr 7fr;
-    grid-template-areas: 'h m' 'h f';
+    grid-template-areas: 'h m' 'f f';
     align-items: center; }
     @media (max-width: 1000px) {
       html .home {
@@ -84,7 +84,7 @@ html {
         grid-area: m; }
         html .home main .map img {
           width: 90%;
-          margin: 5%; }
+          margin: 5% 5% 0% 5%; }
       html .home main .wormhole-link {
         grid-area: w; }
         html .home main .wormhole-link img {
