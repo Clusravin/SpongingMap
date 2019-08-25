@@ -83,7 +83,7 @@ html {
 
             .title {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 3fr 2fr;
                 grid-template-areas:
                 'a b';
 
@@ -103,9 +103,18 @@ html {
                     @media (max-width: $tablet-max-width) {
                         padding: 0;
                     }
+
                     img {
                         width: 2rem;
                         margin: 0rem 0rem 1rem 1.5rem;
+
+                        @media (max-width: $tablet-max-width) {
+                            margin: 0rem 0rem 0.7rem 0rem;
+                        }
+
+                        @media (max-width: $mobile-max-width) {
+                            margin: 0rem 0rem 0.7rem 0rem;
+                        }
                     }
                 }
 

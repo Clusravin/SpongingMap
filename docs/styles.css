@@ -49,8 +49,9 @@ html {
       margin: auto; }
       html .home header .title {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'a b'; }
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: 'a b';
+        grid-gap: 0; }
         @media (max-width: 600px) {
           html .home header .title {
             grid-template-columns: 1fr;
@@ -65,6 +66,12 @@ html {
           html .home header .title .a img {
             width: 2rem;
             margin: 0rem 0rem 1rem 1.5rem; }
+            @media (max-width: 1000px) {
+              html .home header .title .a img {
+                margin: 0rem 0rem 0.7rem 0rem; } }
+            @media (max-width: 600px) {
+              html .home header .title .a img {
+                margin: 0rem 0rem 0.7rem 0rem; } }
         html .home header .title .b {
           grid-area: b;
           padding-top: 14rem; }
