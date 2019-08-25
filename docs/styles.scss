@@ -103,12 +103,16 @@ html {
                     @media (max-width: $tablet-max-width) {
                         padding: 0;
                     }
+                    img {
+                        width: 2rem;
+                        margin: 0rem 0rem 1rem 1.5rem;
+                    }
                 }
 
                 .b {
                     grid-area: b;
 
-                    padding-top: 10rem;
+                    padding-top: 14rem;
 
                     @media (max-width: $tablet-max-width) {
                         padding: 0;
@@ -195,7 +199,6 @@ html {
 
             img {
                 width: $icon-size;
-                height: $icon-size;
             }
         }
     }
