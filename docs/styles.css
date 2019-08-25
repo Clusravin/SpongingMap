@@ -14,10 +14,17 @@ html {
     writing-mode: tb-rl;
     font-size: 4em;
     color: #ffffff; }
+    @media (max-width: 1000px) {
+      html h1 {
+        writing-mode: lr-tb;
+        font-size: 3.4rem; } }
   html h2 {
     writing-mode: tb-rl;
     font-size: 3em;
     color: #ffffff; }
+    @media (max-width: 1000px) {
+      html h2 {
+        writing-mode: lr-tb; } }
   html p {
     font-size: 2em;
     color: #ffffff; }
@@ -29,6 +36,14 @@ html {
     grid-template-columns: 2fr 7fr;
     grid-template-areas: 'h m' 'h f';
     align-items: center; }
+    @media (max-width: 1000px) {
+      html .home {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'h' 'm' 'f'; } }
+    @media (max-width: 600px) {
+      html .home {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'h' 'm' 'f'; } }
     html .home header {
       grid-area: h;
       margin: auto; }
@@ -36,17 +51,35 @@ html {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'a b'; }
+        @media (max-width: 600px) {
+          html .home header .title {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 'a' 'b'; } }
         html .home header .title .a {
           grid-area: a;
           padding-bottom: 10rem; }
+          @media (max-width: 1000px) {
+            html .home header .title .a {
+              padding: 0; } }
         html .home header .title .b {
           grid-area: b;
           padding-top: 10rem; }
+          @media (max-width: 1000px) {
+            html .home header .title .b {
+              padding: 0; } }
+          @media (max-width: 600px) {
+            html .home header .title .b {
+              padding: 0rem 1.5rem; } }
     html .home main {
       grid-area: m;
       display: grid;
       grid-template-columns: 5fr 2fr;
       grid-template-areas: 'm w'; }
+      @media (max-width: 1000px) {
+        html .home main {
+          grid-template-columns: 1fr;
+          grid-template-areas: 'm' 'w'; } }
       html .home main .map {
         grid-area: m; }
         html .home main .map img {
@@ -57,6 +90,10 @@ html {
         html .home main .wormhole-link img {
           width: 50%;
           margin: 25% 15%; }
+          @media (max-width: 1000px) {
+            html .home main .wormhole-link img {
+              width: 25%;
+              margin: 0% 10%; } }
     html .home footer {
       grid-area: f;
       margin-bottom: 1.5rem;
@@ -81,6 +118,11 @@ html {
     display: grid;
     grid-template-columns: 1fr 9fr;
     grid-template-areas: 't m'; }
+    @media (max-width: 1000px) {
+      html .room {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 9fr;
+        grid-template-areas: 't' 'm'; } }
     html .room header {
       grid-area: t; }
       html .room header .title {
