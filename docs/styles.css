@@ -49,7 +49,7 @@ html {
       margin: auto; }
       html .home header .title {
         display: grid;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 7fr 5fr;
         grid-template-areas: 'a b'; }
         @media (max-width: 600px) {
           html .home header .title {
