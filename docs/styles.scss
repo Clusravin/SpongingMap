@@ -89,7 +89,6 @@ html {
 
                 @media (max-width: $mobile-max-width) {
                     grid-template-columns: 1fr;
-                    grid-template-rows: 1fr 1fr;
                     grid-template-areas:
                     'a'
                     'b';
@@ -220,7 +219,6 @@ html {
 
         @media (max-width: $tablet-max-width) {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 9fr;
             grid-template-areas:
             't'
             'm';
@@ -238,6 +236,10 @@ html {
 
             .main-text {
                 margin: 1.5rem 2rem 2rem 0rem;
+
+                @media (max-width: $tablet-max-width) {
+                    margin: 0rem 2.5rem 2.5rem 2.5rem;
+                }
             }
         }
     }

@@ -54,7 +54,6 @@ html {
         @media (max-width: 600px) {
           html .home header .title {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
             grid-template-areas: 'a' 'b'; } }
         html .home header .title .a {
           grid-area: a;
@@ -129,7 +128,6 @@ html {
     @media (max-width: 1000px) {
       html .room {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 9fr;
         grid-template-areas: 't' 'm'; } }
     html .room header {
       grid-area: t; }
@@ -139,5 +137,8 @@ html {
       grid-area: m; }
       html .room main .main-text {
         margin: 1.5rem 2rem 2rem 0rem; }
+        @media (max-width: 1000px) {
+          html .room main .main-text {
+            margin: 0rem 2.5rem 2.5rem 2.5rem; } }
 
 /*# sourceMappingURL=styles.css.map */
