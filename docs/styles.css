@@ -66,10 +66,10 @@ html {
             margin: 0rem 0rem 1rem 1.5rem; }
             @media (max-width: 1000px) {
               html .home header .title .a img {
-                margin: 0rem 0rem 0.7rem 0rem; } }
+                margin: 0 0 0.7rem 0; } }
             @media (max-width: 600px) {
               html .home header .title .a img {
-                margin: 0rem 0rem 0.7rem 0rem; } }
+                margin: 0 0 0.7rem 0; } }
         html .home header .title .b {
           grid-area: b;
           padding-top: 14rem; }
@@ -78,7 +78,7 @@ html {
               padding: 0; } }
           @media (max-width: 600px) {
             html .home header .title .b {
-              padding: 0rem 1.5rem; } }
+              padding: 0 1.5rem; } }
     html .home main {
       grid-area: m;
       display: grid;
@@ -92,7 +92,7 @@ html {
         grid-area: m; }
         html .home main .map img {
           width: 90%;
-          margin: 5% 5% 0% 5%; }
+          margin: 5%; }
       html .home main .wormhole-link {
         grid-area: w; }
         html .home main .wormhole-link img {
@@ -101,26 +101,46 @@ html {
           @media (max-width: 1000px) {
             html .home main .wormhole-link img {
               width: 25%;
-              margin: 0% 10%; } }
+              margin: 0 10%; } }
     html .home footer {
       grid-area: f;
-      margin: 0rem 1.5rem 1.5rem 0rem;
+      margin: 0 1.5rem 1.5rem 0;
       display: grid;
-      grid-template-areas: 'h p g';
-      justify-content: end; }
-      html .home footer .help {
-        grid-area: h;
-        padding: 0.25rem;
-        margin-right: 1.5rem; }
-      html .home footer .people-link {
-        grid-area: p;
-        padding: 0.25rem; }
-      html .home footer .github-link {
-        grid-area: g;
-        padding: 0.25rem;
-        margin-right: 0.5rem; }
-      html .home footer img {
-        width: 1.5rem; }
+      grid-template-areas: 'l r'; }
+      @media (max-width: 600px) {
+        html .home footer {
+          grid-template-areas: 'r' 'l'; } }
+      html .home footer .left {
+        grid-area: l; }
+        html .home footer .left .copyright {
+          margin: 1rem 0 0 47%; }
+          @media (max-width: 1000px) {
+            html .home footer .left .copyright {
+              margin: 1rem 0 0 4rem; } }
+          @media (max-width: 600px) {
+            html .home footer .left .copyright {
+              margin: 1rem 0 0 4rem; } }
+          html .home footer .left .copyright p {
+            font-size: 1rem;
+            color: #888899; }
+      html .home footer .right {
+        grid-area: r;
+        display: grid;
+        grid-template-areas: 'h p g';
+        justify-content: end; }
+        html .home footer .right .help {
+          grid-area: h;
+          padding: 0.25rem;
+          margin-right: 1.5rem; }
+        html .home footer .right .people-link {
+          grid-area: p;
+          padding: 0.25rem; }
+        html .home footer .right .github-link {
+          grid-area: g;
+          padding: 0.25rem;
+          margin-right: 0.5rem; }
+        html .home footer .right img {
+          width: 1.5rem; }
   html .room {
     display: grid;
     grid-template-columns: 1fr 9fr;
@@ -132,13 +152,13 @@ html {
     html .room header {
       grid-area: t; }
       html .room header .title {
-        margin: 2rem 0rem 0rem 2rem; }
+        margin: 2rem 0 0 2rem; }
     html .room main {
       grid-area: m; }
       html .room main .main-text {
-        margin: 1.5rem 2rem 2rem 0rem; }
+        margin: 1.5rem 2rem 2rem 0; }
         @media (max-width: 1000px) {
           html .room main .main-text {
-            margin: 0rem 2.5rem 2.5rem 2.5rem; } }
+            margin: 0 2.5rem 2.5rem 2.5rem; } }
 
 /*# sourceMappingURL=styles.css.map */
