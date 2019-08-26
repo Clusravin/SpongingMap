@@ -50,8 +50,7 @@ html {
       html .home header .title {
         display: grid;
         grid-template-columns: 3fr 2fr;
-        grid-template-areas: 'a b';
-        grid-gap: 0; }
+        grid-template-areas: 'a b'; }
         @media (max-width: 600px) {
           html .home header .title {
             grid-template-columns: 1fr;
