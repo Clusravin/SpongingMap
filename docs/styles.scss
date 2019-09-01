@@ -14,6 +14,10 @@ $bg-dark-primary: #512da8;
 $bg-primary: #673ab7;
 $txt-light-primary: #ffffff;
 
+$mobile-max-width: 768px;
+$tablet-max-width: 992px;
+$desktop-max-width: 1200px;
+
 html {
     margin: 0;
     padding: 0;
@@ -37,6 +41,18 @@ html {
         text-decoration: none;
     }
 
+    .m-border-bottom {
+        @media (max-width: $mobile-max-width) {
+            border-bottom-style: solid;
+            border-width: 1pt;
+            border-bottom-color: $txt-light-primary;
+        }
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
     body {
         header {
             width: 100%;
@@ -46,26 +62,40 @@ html {
 
             display: flex;
             justify-content: space-between;
+            align-items: center;
+
+            @media (max-width: $mobile-max-width) {
+                height: 230pt;
+
+                flex-direction: column;
+            }
 
             .nav-left {
                 width: 300pt;
+                height: 50pt;
 
                 background-color: $bg-dark-primary;
 
-                h1 {
-                    float: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-                    margin: 10pt 25pt 10pt 55pt;
+                @media (max-width: $mobile-max-width) {
+                    width: 100%;
+                }
+
+                h1 {
+                    padding: 0 0 2pt 0;
 
                     a {
                         font-family: 汉仪文黑;
                         color: $txt-light-primary;
                     }
                 }
-                button {
-                    float: left;
 
-                    margin: 15pt 0;
+                button {
+                    margin: 0 15pt;
+                    padding: 0 0 3pt 0;
 
                     background: transparent;
                     border: none;
@@ -74,6 +104,10 @@ html {
                         width: 16pt;
 
                         display: none;
+
+                        @media (max-width: $mobile-max-width) {
+                            display: block;
+                        }
                     }
                 }
             }
@@ -81,21 +115,52 @@ html {
             .nav-right {
                 background-color: $bg-primary;
 
+                display: flex;
+                justify-content: center;
+
+                @media (max-width: $mobile-max-width) {
+                    width: 100%;
+                }
+
                 ul {
                     list-style-type: none;
 
-                    li {
-                        float: left;
+                    display: flex;
 
-                        margin: 16pt 20pt 16pt 0;
+                    @media (max-width: $mobile-max-width) {
+                        width: 80%;
+                        height: 180pt;
+
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                    }
+
+                    li {
+                        margin: 0 20pt 0 0;
+
+                        @media (max-width: $mobile-max-width) {
+                            width: 100%;
+                            height: 25%;
+
+                            margin: 0;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
 
                         a {
                             color: $txt-light-primary;
-
+                            
                             img {
                                 width: 16pt;
 
                                 margin: 0 30pt 0 5pt;
+
+                                @media (max-width: $mobile-max-width) {
+                                    margin: 0;
+                                }
                             }
                         }
                     }
