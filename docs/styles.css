@@ -32,8 +32,14 @@ html a {
   text-decoration: none;
 }
 
+html .border-bottom {
+  border-bottom-style: solid;
+  border-width: 1pt;
+  border-bottom-color: #ffffff;
+}
+
 @media (max-width: 768px) {
-  html .m-border-bottom {
+  html .mobile-border-bottom {
     border-bottom-style: solid;
     border-width: 1pt;
     border-bottom-color: #ffffff;
@@ -61,7 +67,6 @@ html body header {
 
 @media (max-width: 768px) {
   html body header {
-    height: 230pt;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -69,7 +74,7 @@ html body header {
   }
 }
 
-html body header .nav-left {
+html body header #nav-left {
   width: 300pt;
   height: 50pt;
   background-color: #512da8;
@@ -85,39 +90,39 @@ html body header .nav-left {
 }
 
 @media (max-width: 768px) {
-  html body header .nav-left {
+  html body header #nav-left {
     width: 100%;
   }
 }
 
-html body header .nav-left h1 {
+html body header #nav-left h1 {
   padding: 0 0 2pt 0;
 }
 
-html body header .nav-left h1 a {
+html body header #nav-left h1 a {
   font-family: 汉仪文黑;
   color: #ffffff;
 }
 
-html body header .nav-left button {
+html body header #nav-left button {
   margin: 0 15pt;
   padding: 0 0 3pt 0;
   background: transparent;
   border: none;
 }
 
-html body header .nav-left button img {
+html body header #nav-left button img {
   width: 16pt;
   display: none;
 }
 
 @media (max-width: 768px) {
-  html body header .nav-left button img {
+  html body header #nav-left button img {
     display: block;
   }
 }
 
-html body header .nav-right {
+html body header #nav-right {
   background-color: #673ab7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,12 +133,14 @@ html body header .nav-right {
 }
 
 @media (max-width: 768px) {
-  html body header .nav-right {
+  html body header #nav-right {
     width: 100%;
+    height: 0pt;
+    visibility: hidden;
   }
 }
 
-html body header .nav-right ul {
+html body header #nav-right ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -141,7 +148,7 @@ html body header .nav-right ul {
 }
 
 @media (max-width: 768px) {
-  html body header .nav-right ul {
+  html body header #nav-right ul {
     width: 80%;
     height: 180pt;
     -webkit-box-orient: vertical;
@@ -156,12 +163,12 @@ html body header .nav-right ul {
   }
 }
 
-html body header .nav-right ul li {
+html body header #nav-right ul li {
   margin: 0 20pt 0 0;
 }
 
 @media (max-width: 768px) {
-  html body header .nav-right ul li {
+  html body header #nav-right ul li {
     width: 100%;
     height: 25%;
     margin: 0;
@@ -177,17 +184,17 @@ html body header .nav-right ul li {
   }
 }
 
-html body header .nav-right ul li a {
+html body header #nav-right ul li a {
   color: #ffffff;
 }
 
-html body header .nav-right ul li a img {
+html body header #nav-right ul li a img {
   width: 16pt;
   margin: 0 30pt 0 5pt;
 }
 
 @media (max-width: 768px) {
-  html body header .nav-right ul li a img {
+  html body header #nav-right ul li a img {
     margin: 0;
   }
 }
@@ -202,7 +209,7 @@ html footer {
           justify-content: center;
 }
 
-html footer .copyright p {
+html footer #copyright p {
   font-size: 10pt;
 }
 /*# sourceMappingURL=styles.css.map */
