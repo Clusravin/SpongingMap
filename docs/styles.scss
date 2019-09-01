@@ -29,6 +29,10 @@ html {
         font-size: 20pt;
     }
 
+    h2 {
+        font-size: 16pt;
+    }
+
     a {
         text-decoration: none;
     }
@@ -36,20 +40,22 @@ html {
     body {
         header {
             width: 100%;
-            height: 40pt;
+            height: 50pt;
 
-            background-color: $primary;
+            background-color: $bg-primary;
 
             display: flex;
             justify-content: space-between;
 
             .nav-left {
-                width: 308pt;
+                width: 300pt;
 
-                background-color: $dark-primary;
+                background-color: $bg-dark-primary;
 
                 h1 {
                     float: left;
+
+                    margin: 10pt 25pt 10pt 55pt;
 
                     a {
                         font-family: 汉仪文黑;
@@ -59,17 +65,21 @@ html {
                 button {
                     float: left;
 
+                    margin: 15pt 0;
+
                     background: transparent;
                     border: none;
 
                     img {
-                        width: 20pt;
+                        width: 16pt;
+
+                        display: none;
                     }
                 }
             }
 
             .nav-right {
-                background-color: $primary;
+                background-color: $bg-primary;
 
                 ul {
                     list-style-type: none;
@@ -77,15 +87,32 @@ html {
                     li {
                         float: left;
 
+                        margin: 16pt 20pt 16pt 0;
+
                         a {
                             color: $txt-light-primary;
 
                             img {
-                                width: 20pt;
+                                width: 16pt;
+
+                                margin: 0 30pt 0 5pt;
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        .copyright {
+            p {
+                font-size: 10pt;
             }
         }
     }
