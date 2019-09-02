@@ -1,14 +1,40 @@
-function shouMenu() {
-    if (document.querySelector("#nav").style.height == "50pt") {
-        document.querySelector("#nav").style.height = "230pt";
-        document.querySelector("#nav-right").style.height = "180pt";
-        document.querySelector("#nav-right").style.visibility = "visible";
-        document.querySelector("#nav-left").classList.add("mobile-border-bottom");
+var nav = document.querySelector("#nav");
+var navLeft = document.querySelector("#nav-left");
+var navRight = document.querySelector("#nav-right");
+
+function menuIsFolded() {
+    if (nav.style.height == "50pt") {
+        return true;
     }
     else {
-        document.querySelector("#nav").style.height = "50pt";
-        document.querySelector("#nav-right").style.height = "0";
-        document.querySelector("#nav-right").style.visibility = "hidden";
-        document.querySelector("#nav-left").classList.remove("mobile-border-bottom");
+        return false;
     }
+}
+
+function expandMenu() {
+    nav.style.height = "230pt";
+    navRight.style.height = "180pt";
+    navRight.style.visibility = "visible";
+    navLeft.classList.add("mobile-border-bottom");
+}
+
+function foldMenu() {
+    nav.style.height = "50pt";
+    navRight.style.height = "0";
+    navRight.style.visibility = "hidden";
+    navLeft.classList.remove("mobile-border-bottom");
+}
+
+
+function toggleMenu() {
+    if (menuIsFolded()) {
+        expandMenu();
+    }
+    else {
+        foldMenu();
+    }
+}
+
+window.onresize = function() {
+    location.reload();
 }
