@@ -38,8 +38,8 @@ html .border-bottom {
   border-bottom-color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  html .mobile-border-bottom {
+@media (max-width: 992px) {
+  html .tablet-border-bottom {
     border-bottom-style: solid;
     border-width: 1pt;
     border-bottom-color: #ffffff;
@@ -68,12 +68,16 @@ html body header {
           align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html body header {
+    background-color: transparent;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -92,7 +96,7 @@ html body header #nav-left {
           align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html body header #nav-left {
     width: 100%;
   }
@@ -119,7 +123,7 @@ html body header #nav-left button img {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html body header #nav-left button img {
     display: block;
   }
@@ -135,11 +139,17 @@ html body header #nav-right {
           justify-content: center;
 }
 
+@media (max-width: 992px) {
+  html body header #nav-right {
+    width: 30%;
+    height: 0pt;
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 768px) {
   html body header #nav-right {
     width: 100%;
-    height: 0pt;
-    visibility: hidden;
   }
 }
 
@@ -150,7 +160,7 @@ html body header #nav-right ul {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html body header #nav-right ul {
     width: 80%;
     height: 180pt;
@@ -170,7 +180,7 @@ html body header #nav-right ul li {
   margin: 0 20pt 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html body header #nav-right ul li {
     width: 100%;
     height: 25%;
@@ -196,7 +206,7 @@ html body header #nav-right ul li a img {
   margin: 0 30pt 0 5pt;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   html body header #nav-right ul li a img {
     margin: 0;
   }

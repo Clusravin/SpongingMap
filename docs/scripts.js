@@ -21,14 +21,14 @@ function expandMenu() {
     nav.style.height = navHeightExpanded;
     navRight.style.height = navRightHeightExpanded;
     navRight.style.visibility = "visible";
-    navLeft.classList.add("mobile-border-bottom");
+    navLeft.classList.add("tablet-border-bottom");
 }
 
 function foldMenu() {
     nav.style.height = navHeightFolded;
     navRight.style.height = navRightHeightFolded;
     navRight.style.visibility = "hidden";
-    navLeft.classList.remove("mobile-border-bottom");
+    navLeft.classList.remove("tablet-border-bottom");
 }
 
 
@@ -42,20 +42,20 @@ function toggleMenu() {
 }
 
 window.onresize = function() {
-    let mobileMaxWidth = 768;
+    let tabletMaxWidth = 992;
 
     let width = document.documentElement.clientWidth;
 
-    if (width > mobileMaxWidth) {
+    if (width > tabletMaxWidth) {
         nav.style.height = navHeightFolded;
         navRight.style.height = "auto";
         navRight.style.visibility = "visible";
-        navLeft.classList.remove("mobile-border-bottom");
+        navLeft.classList.remove("tablet-border-bottom");
     }
     else {
         nav.style.height = navHeightFolded;
         navRight.style.height = navRightHeightFolded;
         navRight.style.visibility = "hidden";
-        navLeft.classList.remove("mobile-border-bottom");
+        navLeft.classList.remove("tablet-border-bottom");
     }
 }
