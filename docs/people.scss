@@ -1,0 +1,45 @@
+$bg-dark-primary: #512da8;
+$bg-primary: #673ab7;
+$bg-light-primary: #d1c4e9;
+$bg-dark-secondary: #212121;
+$txt-light-primary: #ffffff;
+
+$mobile-max-width: 768px;
+$tablet-max-width: 992px;
+$desktop-max-width: 1200px;
+
+h2 {
+    font-size: 16pt;
+    font-weight: normal;
+
+    margin: 30pt;
+}
+
+.person {
+    display: flex;
+
+    @media (max-width: $mobile-max-width) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: 12pt;
+        font-weight: normal;
+
+        color: $bg-dark-primary;
+
+        margin: 8pt 6pt;
+
+        @media (max-width: $mobile-max-width) {
+            margin-top: 16pt;
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        font-size: 12pt;
+
+        margin: 8pt 6pt;
+    }
+}
