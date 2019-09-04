@@ -207,7 +207,6 @@ html body header #nav-right ul li a img {
 }
 
 html body main {
-  padding: 5rem 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,7 +217,7 @@ html body main {
 
 html body main .main {
   width: 40rem;
-  height: 50rem;
+  height: 40rem;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;

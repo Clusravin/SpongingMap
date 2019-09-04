@@ -7,6 +7,13 @@ let navRightHeightExpanded = "16rem";
 let nav = document.querySelector("#nav");
 let navLeft = document.querySelector("#nav-left");
 let navRight = document.querySelector("#nav-right");
+let main = document.querySelector(".main");
+
+function init() {
+    let height = document.documentElement.clientHeight;
+
+    main.style.height = height + "px";
+}
 
 function menuIsFolded() {
     if (nav.style.height == navHeightFolded) {
