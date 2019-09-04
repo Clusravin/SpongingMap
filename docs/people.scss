@@ -9,10 +9,10 @@ $tablet-max-width: 992px;
 $desktop-max-width: 1200px;
 
 h2 {
-    font-size: 16pt;
+    font-size: 1.6rem;
     font-weight: normal;
 
-    margin: 30pt;
+    margin: 3rem;
 }
 
 .person {
@@ -24,22 +24,22 @@ h2 {
     }
 
     h3 {
-        font-size: 12pt;
+        font-size: 1.2rem;
         font-weight: normal;
 
         color: $bg-dark-primary;
 
-        margin: 8pt 6pt;
+        margin: 0.8rem 0.6rem;
 
         @media (max-width: $mobile-max-width) {
-            margin-top: 16pt;
+            margin-top: 1.6rem;
             margin-bottom: 0;
         }
     }
 
     p {
-        font-size: 12pt;
+        font-size: 1.2rem;
 
-        margin: 8pt 6pt;
+        margin: 0.8rem 0.6rem;
     }
 }

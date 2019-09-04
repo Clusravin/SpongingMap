@@ -1,7 +1,7 @@
 h2 {
-  font-size: 16pt;
+  font-size: 1.6rem;
   font-weight: normal;
-  margin: 30pt;
+  margin: 3rem;
 }
 
 .person {
@@ -23,21 +23,21 @@ h2 {
 }
 
 .person h3 {
-  font-size: 12pt;
+  font-size: 1.2rem;
   font-weight: normal;
   color: #512da8;
-  margin: 8pt 6pt;
+  margin: 0.8rem 0.6rem;
 }
 
 @media (max-width: 768px) {
   .person h3 {
-    margin-top: 16pt;
+    margin-top: 1.6rem;
     margin-bottom: 0;
   }
 }
 
 .person p {
-  font-size: 12pt;
-  margin: 8pt 6pt;
+  font-size: 1.2rem;
+  margin: 0.8rem 0.6rem;
 }
 /*# sourceMappingURL=people.css.map */

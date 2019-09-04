@@ -1,7 +1,7 @@
-let navHeightFolded = "50pt";
-let navHeightExpanded = "230pt";
+let navHeightFolded = "4rem";
+let navHeightExpanded = "20.1rem";
 let navRightHeightFolded = "0";
-let navRightHeightExpanded = "180pt";
+let navRightHeightExpanded = "16rem";
 
 
 let nav = document.querySelector("#nav");
@@ -21,14 +21,12 @@ function expandMenu() {
     nav.style.height = navHeightExpanded;
     navRight.style.height = navRightHeightExpanded;
     navRight.style.visibility = "visible";
-    navLeft.classList.add("tablet-border-bottom");
 }
 
 function foldMenu() {
     nav.style.height = navHeightFolded;
     navRight.style.height = navRightHeightFolded;
     navRight.style.visibility = "hidden";
-    navLeft.classList.remove("tablet-border-bottom");
 }
 
 
@@ -50,12 +48,10 @@ window.onresize = function() {
         nav.style.height = navHeightFolded;
         navRight.style.height = "auto";
         navRight.style.visibility = "visible";
-        navLeft.classList.remove("tablet-border-bottom");
     }
     else {
         nav.style.height = navHeightFolded;
         navRight.style.height = navRightHeightFolded;
         navRight.style.visibility = "hidden";
-        navLeft.classList.remove("tablet-border-bottom");
     }
 }
