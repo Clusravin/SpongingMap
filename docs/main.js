@@ -3,21 +3,21 @@ let navHeightExpanded = "20.1rem";
 let navRightHeightFolded = "0";
 let navRightHeightExpanded = "16rem";
 
-let nav = document.querySelector("#nav");
-let navLeft = document.querySelector("#nav-left");
-let navRight = document.querySelector("#nav-right");
-let main = document.querySelector(".main");
-let copyright = document.querySelector("#copyright");
+var nav = document.querySelector("#nav");
+var navLeft = document.querySelector("#nav-left");
+var navRight = document.querySelector("#nav-right");
+var main = document.querySelector(".main");
+var copyright = document.querySelector("#copyright");
 
 function resizeMain() {
-    let height = document.documentElement.clientHeight;
+    var height = document.documentElement.clientHeight;
 
     main.style.height = height + "px";
 }
 
 function insertYear() {
-    let date = new Date;
-    let year = date.getFullYear();
+    var date = new Date;
+    var year = date.getFullYear();
 
     copyright.innerHTML = "<p>&copy; " + year + " 清华附中朝阳学校2019届3班</p>";
 }
@@ -62,7 +62,7 @@ function toggleMenu() {
 window.onresize = function() {
     let tabletMaxWidth = 992;
 
-    let width = document.documentElement.clientWidth;
+    var width = document.documentElement.clientWidth;
 
     if (width > tabletMaxWidth) {
         nav.style.height = navHeightFolded;
