@@ -12,7 +12,7 @@ var copyright = document.querySelector("#copyright");
 function resizeMain() {
     var height = document.documentElement.clientHeight;
 
-    main.style.height = height - 4 * 16 + "px";
+    main.style.height = height - (4 + 2) * 16 + "px";
 }
 
 function insertYear() {
