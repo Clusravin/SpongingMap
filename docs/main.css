@@ -217,7 +217,8 @@ html body main {
 
 html body main .main {
   width: 40rem;
-  height: 40rem;
+  height: 0;
+  margin: 4rem 0 0 0;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
