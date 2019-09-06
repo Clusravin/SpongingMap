@@ -8,8 +8,8 @@ Highcharts.Map('map', {
     },
     colorAxis: {
         min: 0,
-        minColor: '#111111',
-        maxColor: '#000000'
+        minColor: '#7651d0',
+        maxColor: '#341d6c'
     },
     series: [{
         data: data,
