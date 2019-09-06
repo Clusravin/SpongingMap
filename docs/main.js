@@ -59,7 +59,7 @@ function toggleMenu() {
     }
 }
 
-window.onresize = function() {
+function updateMenu() {
     let tabletMaxWidth = 992;
 
     var width = document.documentElement.clientWidth;
@@ -74,4 +74,10 @@ window.onresize = function() {
         navRight.style.height = navRightHeightFolded;
         navRight.style.visibility = "hidden";
     }
+}
+
+window.onresize = function() {
+    resizeMain();
+    
+    updateMenu();
 }
