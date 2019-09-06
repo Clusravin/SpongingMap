@@ -1,5 +1,5 @@
 var data = [{"name":"China", "value":32},
-            {"name":"Taiwan", "value":0},
+            {"name":"Taiwan", "value":32},
             {"name":"Ireland", "value":1}];
 
 Highcharts.Map('map', {
