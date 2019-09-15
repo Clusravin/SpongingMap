@@ -6,4 +6,4 @@ _notes/
 /node_modules/
 *.DS_Store
 docs/.sass-cache
-.vscode
+docs/.vscode
