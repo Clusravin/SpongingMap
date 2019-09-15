@@ -4,9 +4,9 @@ $bg-light-primary: #d1c4e9;
 $bg-dark-secondary: #212121;
 $txt-light-primary: #ffffff;
 
-$mobile-max-width: 768px;
-$tablet-max-width: 992px;
-$desktop-max-width: 1200px;
+$max-width-1: 768px;
+$max-width-2: 992px;
+$max-width-3: 1200px;
 
 h2 {
     font-size: 1.6rem;
@@ -18,7 +18,7 @@ h2 {
 .person {
     display: flex;
 
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: $max-width-1) {
         flex-direction: column;
         align-items: center;
     }
@@ -31,7 +31,7 @@ h2 {
 
         margin: 0.8rem 0.6rem;
 
-        @media (max-width: $mobile-max-width) {
+        @media (max-width: $max-width-1) {
             margin-top: 1.6rem;
             margin-bottom: 0;
         }
