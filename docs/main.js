@@ -19,7 +19,7 @@ function insertYear() {
     var date = new Date;
     var year = date.getFullYear();
 
-    copyright.innerHTML = "<p>&copy; " + year + " 清华附中朝阳学校2019届3班</p>";
+    copyright.innerHTML = "<p>&copy; " + year + " 范子睿</p>";
 }
 
 function init() {

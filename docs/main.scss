@@ -13,8 +13,8 @@
 $bg-dark-primary: #512da8;
 $bg-primary: #673ab7;
 $bg-light-primary: #d1c4e9;
-$bg-dark-secondary: #212121;
 $txt-light-primary: #ffffff;
+$txt-dark-secondary: #212121;
 
 $max-width-1: 768px;
 $max-width-2: 992px;
@@ -211,7 +211,7 @@ html {
         footer {
             width: 100%;
 
-            position: fixed;
+            position: absolute;
             bottom: 0;
             z-index: 1;
 
@@ -219,10 +219,8 @@ html {
             justify-content: center;
 
             #copyright {
-                width: 15rem;
-                height: 2.2rem;
-
-                background-color: $bg-dark-secondary;
+                width: 7rem;
+                height: 2rem;
 
                 display: flex;
                 justify-content: center;
@@ -235,7 +233,7 @@ html {
                 p {
                     font-size: 0.7rem;
 
-                    color: $txt-light-primary;
+                    color: $txt-dark-secondary;
                 }
             }
         }
