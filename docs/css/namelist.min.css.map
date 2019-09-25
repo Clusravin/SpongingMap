@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "namelist.scss"
+        "../namelist.scss"
     ],
     "names": [],
-    "file": "namelist.css"
+    "file": "namelist.min.css"
 }
