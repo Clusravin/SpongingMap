@@ -36,7 +36,7 @@ function insertNav() {
                     <a href="https://martaincreature.github.io/ClassWeekly/" target="_blank">往期周记</a>\
                 </li>\
                 <li>\
-                    <a href="https://github.com/MartainCreature/SpongingMap"><img src="images/github.svg"\
+                    <a href="https://github.com/MartainCreature/SpongingMap" target="_blank"><img src="images/github.svg"\
                             alt="github"></img></a>\
                 </li>\
             </ul>\
