@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,AAAA,IAAI,AAAC,CACD,KAAK,CAAE,IAAI,CACd",
     "sources": [
-        "../index.scss"
+        "../map.scss"
     ],
     "names": [],
-    "file": "index.min.css"
+    "file": "map.min.css"
 }
