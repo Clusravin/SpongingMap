@@ -47,7 +47,12 @@ function insertCopyright() {
     var date = new Date;
     var year = date.getFullYear();
 
-    copyright.innerHTML = "<p>&copy; " + year + " 范子睿</p>";
+    if (year == 2019) {
+        copyright.innerHTML = "<p>&copy; 2019 范子睿</p>";
+    }
+    else {
+        copyright.innerHTML = "<p>&copy; 2019-" + year + " 范子睿</p>";
+    }
 }
 
 function resizeMain() {
