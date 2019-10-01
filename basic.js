@@ -92,13 +92,13 @@ function updateMenu() {
 
     var width = document.documentElement.clientWidth;
 
+    nav.style.height = navHeightFolded;
+
     if (width > tabletMaxWidth) {
-        nav.style.height = navHeightFolded;
         navRight.style.height = "auto";
         navRight.style.visibility = "visible";
     }
     else {
-        nav.style.height = navHeightFolded;
         navRight.style.height = navRightHeightFolded;
         navRight.style.visibility = "hidden";
     }
