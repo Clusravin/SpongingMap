@@ -6,8 +6,6 @@ let navRightHeightExpanded = "16rem";
 var nav = document.querySelector("#nav");
 var navLeft = document.querySelector("#nav-left");
 var navRight = document.querySelector("#nav-right");
-var main = document.querySelector(".main");
-var copyright = document.querySelector("#copyright");
 
 function insertNav() {
     nav.innerHTML = '<div id="nav-left">\
@@ -82,7 +80,6 @@ function foldMenu() {
     navRight.style.visibility = "hidden";
 }
 
-
 function toggleMenu() {
     if (menuIsFolded()) {
         expandMenu();
@@ -97,16 +94,33 @@ function updateMenu() {
 
     var width = document.documentElement.clientWidth;
 
+    nav.style.height = navHeightFolded;
+
     if (width > tabletMaxWidth) {
-        nav.style.height = navHeightFolded;
         navRight.style.height = "auto";
         navRight.style.visibility = "visible";
     }
     else {
-        nav.style.height = navHeightFolded;
         navRight.style.height = navRightHeightFolded;
         navRight.style.visibility = "hidden";
     }
+}
+
+var copyright = document.querySelector("#copyright");
+
+function insertCopyright() {
+    var date = new Date;
+    var year = date.getFullYear();
+
+    copyright.innerHTML = "<p>&copy; " + year + " 范子睿</p>";
+}
+
+var main = document.querySelector(".main");
+
+function resizeMain() {
+    var height = document.documentElement.clientHeight;
+
+    main.style.height = height - (4 + 2) * 16 + "px";
 }
 
 window.onload = function() {

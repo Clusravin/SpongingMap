@@ -1,3 +1,127 @@
-#map {
-    width: 100%;
+$basic: #673ab7;
+$primary: #ffc108;
+$primary-light: #ffda6d;
+
+body {
+    overflow: hidden;
+
+    main {
+        width: 100%;
+
+        cursor: move;
+
+        #map {
+            width: 100%;
+
+            button {
+                border-style: solid;
+                border-radius: 0.5rem;
+                background-color: $primary;
+                border-color: $primary-light;
+            
+                position: absolute;
+            
+                border-width: 0.2rem;
+                width: 1rem;
+                height: 1rem;
+            }
+            
+            .hive {
+                button {
+                    border-radius: 0;
+                    border-style: none;
+
+                    position: absolute;
+                }
+            
+                #a, #b, #c {
+                    background-color: $primary;
+            
+                    width: 1.2rem;
+                    height: 1rem;
+                }
+            
+                #A, #B, #C {
+                    background-color: $primary-light;
+            
+                    width: 1.8rem;
+                    height: 1.5rem;
+                }
+            
+                #b, #B {
+                    transform: translate(-50%, -50%);
+                    transform: rotate(60deg);
+                }
+            
+                #c, #C {
+                    transform: translate(-50%, -50%);
+                    transform: rotate(300deg);
+                }
+            }
+
+            #beijing {
+                width: 100%;
+
+                position: absolute;
+                top: -190rem;
+                left: -100rem;
+
+                img {
+                    width: 300rem;
+                }
+            }
+
+            #china {
+                width: 100%;
+
+                position: absolute;
+                top: -10rem;
+                left: -35rem;
+
+                display: none;
+
+                img {
+                    width: 100rem;
+                }
+            }
+
+            #world {
+                width: 100%;
+
+                position: absolute;
+                top: -10rem;
+                left: -60rem;
+
+                display: none;
+
+                img {
+                    width: 150rem;
+                }
+            }
+
+            #up {
+                border-style: none;
+                border-radius: 0;
+
+                position: absolute;
+                top: 6rem;
+                left: 0;
+
+                background-color: $basic;
+
+                width: 4rem;
+                height: 2rem;
+
+                display: flex;
+                justify-content: flex-end;
+                align-content: center;
+
+                img {
+                    width: 1rem;
+
+                    margin: 0.5rem;
+                }
+            }
+        }
+    }
 }
