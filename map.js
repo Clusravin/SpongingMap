@@ -9,6 +9,7 @@ for (var i = 0; i < hive.length; i++) {
         <button id="c" onclick="down()"></button>';
 }
 
+var main = document.querySelector("#map");
 var map = [document.querySelector("#beijing"), document.querySelector("#china"), document.querySelector("#world")];
 
 var upButton = document.querySelector("#up");
@@ -55,7 +56,7 @@ var x0, y0;
 var left0, top0;
 var isDown = false;
 
-map[level].onmousedown = function (e) {
+main.onmousedown = function (e) {
     e.preventDefault();
 
     x0 = e.clientX;
@@ -80,6 +81,6 @@ window.onmousemove = function (e) {
     }
 }
 
-map[level].onmouseup = function () {
+main.onmouseup = function () {
     isDown = false;
 }
