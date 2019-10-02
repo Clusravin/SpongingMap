@@ -6,8 +6,6 @@ let navRightHeightExpanded = "16rem";
 var nav = document.querySelector("#nav");
 var navLeft = document.querySelector("#nav-left");
 var navRight = document.querySelector("#nav-right");
-var main = document.querySelector(".main");
-var copyright = document.querySelector("#copyright");
 
 function insertNav() {
     nav.innerHTML = '<div id="nav-left">\
@@ -43,19 +41,6 @@ function insertNav() {
         </div>';
 }
 
-function insertCopyright() {
-    var date = new Date;
-    var year = date.getFullYear();
-
-    copyright.innerHTML = "<p>&copy; " + year + " 范子睿</p>";
-}
-
-function resizeMain() {
-    var height = document.documentElement.clientHeight;
-
-    main.style.height = height - (4 + 2) * 16 + "px";
-}
-
 function menuIsFolded() {
     if (nav.style.height == navHeightFolded) {
         return true;
@@ -76,7 +61,6 @@ function foldMenu() {
     navRight.style.height = navRightHeightFolded;
     navRight.style.visibility = "hidden";
 }
-
 
 function toggleMenu() {
     if (menuIsFolded()) {
@@ -102,6 +86,23 @@ function updateMenu() {
         navRight.style.height = navRightHeightFolded;
         navRight.style.visibility = "hidden";
     }
+}
+
+var copyright = document.querySelector("#copyright");
+
+function insertCopyright() {
+    var date = new Date;
+    var year = date.getFullYear();
+
+    copyright.innerHTML = "<p>&copy; " + year + " 范子睿</p>";
+}
+
+var main = document.querySelector(".main");
+
+function resizeMain() {
+    var height = document.documentElement.clientHeight;
+
+    main.style.height = height - (4 + 2) * 16 + "px";
 }
 
 window.onload = function() {
