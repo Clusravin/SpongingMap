@@ -63,18 +63,40 @@ body {
                 width: 100%;
 
                 position: absolute;
-                top: -160rem;
-                left: -150rem;
+                top: -190rem;
+                left: -100rem;
 
                 img {
-                    width: 400rem;
+                    width: 300rem;
                 }
             }
 
-            #china, #world {
-                display: none;
+            #china {
+                width: 100%;
 
                 position: absolute;
+                top: -10rem;
+                left: -35rem;
+
+                display: none;
+
+                img {
+                    width: 100rem;
+                }
+            }
+
+            #world {
+                width: 100%;
+
+                position: absolute;
+                top: -10rem;
+                left: -60rem;
+
+                display: none;
+
+                img {
+                    width: 150rem;
+                }
             }
 
             #up {
