@@ -2,6 +2,7 @@ let navHeightFolded = "4rem";
 let navHeightExpanded = "20.1rem";
 let navRightHeightFolded = "0";
 let navRightHeightExpanded = "16rem";
+let navRightHeightDefault = "1.5rem";
 
 var nav = document.querySelector("#nav");
 var navLeft = document.querySelector("#nav-left");
@@ -97,7 +98,7 @@ function updateMenu() {
     nav.style.height = navHeightFolded;
 
     if (width > tabletMaxWidth) {
-        navRight.style.height = "auto";
+        navRight.style.height = navRightHeightDefault;
         navRight.style.visibility = "visible";
     }
     else {
