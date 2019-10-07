@@ -1,12 +1,16 @@
 var hive = document.querySelectorAll(".hive");
 
 for (var i = 0; i < hive.length; i++) {
-    hive[i].innerHTML = '<button id="A" onclick="down()"></button>\
-        <button id="B" onclick="down()"></button>\
-        <button id="C" onclick="down()"></button>\
-        <button id="a" onclick="down()"></button>\
-        <button id="b" onclick="down()"></button>\
-        <button id="c" onclick="down()"></button>';
+    hive[i].innerHTML = '<div id="outer">\
+            <button id="a" onclick="down()"></button>\
+            <button id="b" onclick="down()"></button>\
+            <button id="c" onclick="down()"></button>\
+        </div>\
+        <div id="inner">\
+            <button id="a" onclick="down()"></button>\
+            <button id="b" onclick="down()"></button>\
+            <button id="c" onclick="down()"></button>\
+        </div>';
 }
 
 var main = document.querySelector("#map");

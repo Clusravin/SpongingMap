@@ -30,32 +30,36 @@ body {
                 button {
                     border-radius: 0;
                     border-style: none;
-
-                    position: absolute;
                 }
             
-                #a, #b, #c {
-                    background-color: $primary;
-            
-                    width: 1.2rem;
-                    height: 1rem;
-                }
-            
-                #A, #B, #C {
-                    background-color: $primary-light;
-            
-                    width: 1.8rem;
-                    height: 1.5rem;
-                }
-            
-                #b, #B {
+                #b {
                     transform: translate(-50%, -50%);
                     transform: rotate(60deg);
                 }
             
-                #c, #C {
+                #c {
                     transform: translate(-50%, -50%);
                     transform: rotate(300deg);
+                }
+
+                #outer {
+                    #a, #b, #c {
+                        background-color: $primary-light;
+                
+                        width: 1rem;
+                        height: 1rem * 1.732;
+                    }
+                }
+
+                #inner {
+                    #a, #b, #c {
+                        background-color: $primary;
+                
+                        width: 0.7rem;
+                        height: 0.7rem * 1.732;
+
+                        margin: 0.3rem 0.16rem;
+                    }
                 }
             }
 
@@ -70,10 +74,12 @@ body {
                     width: 300rem;
                 }
 
-                // #qhc {
-                //     top: 0rem;
-                //     left: 0rem;
-                // }
+                #thc {
+                    #A, #B, #C, #a, #b, #c {
+                        top: 206rem;
+                        left: 150rem;
+                    }
+                }
 
                 #bjfu {
                     top: 199rem;
@@ -154,10 +160,12 @@ body {
                     width: 100rem;
                 }
 
-                // #beijing_all {
-                //     top: 0rem;
-                //     left: 0rem;
-                // }
+                #beijing_all {
+                    #A, #B, #C, #a, #b, #c {
+                        top: 31rem;
+                        left: 71rem;
+                    }
+                }
 
                 #jilin_jlu {
                     top: 21rem;
@@ -209,10 +217,12 @@ body {
                     width: 150rem;
                 }
 
-                // #china_all {
-                //     top: 0rem;
-                //     left: 0rem;
-                // }
+                #china_all {
+                    #A, #B, #C, #a, #b, #c {
+                        top: 29rem;
+                        left: 120rem;
+                    }
+                }
 
                 #ireland_ucd {
                     top: 23rem;
