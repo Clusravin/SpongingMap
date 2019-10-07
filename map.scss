@@ -46,8 +46,8 @@ body {
                     #a, #b, #c {
                         background-color: $primary-light;
                 
-                        width: 1rem;
-                        height: 1rem * 1.732;
+                        width: 1rem * 1.732;
+                        height: 1rem;
                     }
                 }
 
@@ -55,10 +55,10 @@ body {
                     #a, #b, #c {
                         background-color: $primary;
                 
-                        width: 0.7rem;
-                        height: 0.7rem * 1.732;
+                        width: 0.7rem * 1.732;
+                        height: 0.7rem;
 
-                        margin: 0.3rem 0.16rem;
+                        margin: 0.25rem;
                     }
                 }
             }
