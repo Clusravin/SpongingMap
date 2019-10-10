@@ -28,6 +28,7 @@ body {
                 position: absolute;
             
                 border-width: 0.3rem;
+
                 width: 1.5rem;
                 height: 1.5rem;
             }
@@ -265,10 +266,14 @@ body {
             #info {
                 display: none;
 
+                border-style: none none none solid;
+                border-width: 2px;
+
                 position: absolute;
                 right: 0;
 
                 background-color: #fff;
+                border-color: #eee;
 
                 width: 20rem;
                 height: 0;
