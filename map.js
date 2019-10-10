@@ -50,6 +50,9 @@ function down() {
     if (level > 0) {
         level--;
     }
+    else {
+        showInfo("thc");
+    }
 
     upButton.style.display = "flex";
 
@@ -88,3 +91,27 @@ window.onmousemove = function (e) {
 main.onmouseup = function () {
     isDown = false;
 }
+
+var info = document.querySelector("#info");
+
+function resizeInfo() {
+    var height = document.documentElement.clientHeight;
+
+    info.style.height = height + "px";
+}
+
+function onloadOther() {
+    resizeInfo();
+}
+
+function onresizeOther() {
+    resizeInfo();
+}
+
+function showInfo(name) {
+    info.style.display = "flex";
+}
+
+function hideInfo() {
+    info.style.display = "none";
+}   

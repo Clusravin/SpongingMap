@@ -130,10 +130,14 @@ window.onload = function() {
     insertNav();
 
     insertCopyright();
+
+    onloadOther();
 }
 
 window.onresize = function() {
     resizeMain();
     
     updateMenu();
+
+    onresizeOther();
 }
