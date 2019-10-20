@@ -239,7 +239,7 @@ body {
                 }
             }
 
-            #up {
+            #mapUp {
                 border-style: none;
                 border-radius: 0;
 
@@ -260,47 +260,6 @@ body {
                     width: 1rem;
 
                     margin: 0.5rem;
-                }
-            }
-
-            #info {
-                display: none;
-
-                border-style: none none none solid;
-                border-width: 2px;
-
-                position: absolute;
-                right: 0;
-
-                background-color: #fff;
-                border-color: #eee;
-
-                width: 20rem;
-                height: 0;
-
-                margin: 1rem 0 0 0;
-
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                @media (max-width: $max-width-1) {
-                    width: 100%;
-                }
-
-                button {
-                    border-style: none;
-                    background-color: none;
-                
-                    position: absolute;
-
-                    background-color: none;
-                
-                    width: 1rem;
-
-                    img {
-                        width: 1rem;
-                    }
                 }
             }
         }

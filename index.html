@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="范子睿, Fan Zirui">
-    <meta name="description" content="清华附中朝阳学校2019届3班的蹭饭地图"> 
+    <meta name="description" content="清华附中朝阳学校2019届3班的蹭饭地图">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>直升机班的蹭饭地图</title>
 
     <link rel="stylesheet" href="css/basic.min.css">
     <link rel="stylesheet" href="css/map.min.css">
+    <link rel="stylesheet" href="css/info.min.css">
 </head>
 
 <body>
@@ -62,11 +63,21 @@
                 <button id="ireland_ucd" class="bee" onclick="showInfo('ireland_ucd')"></button>
             </div>
 
-            <button id="up" onclick="up()">
-                <img src="images/up.svg" alt="up">
+            <button id="mapUp" onclick="mapUp()">
+                <img src="images/mapUp.svg" alt="mapUp">
             </button>
 
             <div id="info">
+                <div id="schoolPart"></div>
+
+                <button id="infoUp" onclick="infoUp()">
+                    <img src="images/infoUp.svg" alt="infoUp">
+                </button>
+                <div id="peoplePart"></div>
+                <button id="infoDown" onclick="infoDown()">
+                    <img src="images/infoDown.svg" alt="infoDown">
+                </button>
+
                 <button onclick="hideInfo()">
                     <img src="images/close.svg" alt="close">
                 </button>
@@ -80,6 +91,8 @@
 
     <script src="basic.js"></script>
     <script src="map.js"></script>
+    <script src="data.js"></script>
+    <script src="info.js"></script>
 </body>
 
 </html>

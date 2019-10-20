@@ -2,21 +2,21 @@ var hive = document.querySelectorAll(".hive");
 
 for (var i = 0; i < hive.length; i++) {
     hive[i].innerHTML = '<div id="outer">\
-            <button id="a" onclick="down()"></button>\
-            <button id="b" onclick="down()"></button>\
-            <button id="c" onclick="down()"></button>\
+            <button id="a" onclick="mapDown()"></button>\
+            <button id="b" onclick="mapDown()"></button>\
+            <button id="c" onclick="mapDown()"></button>\
         </div>\
         <div id="inner">\
-            <button id="a" onclick="down()"></button>\
-            <button id="b" onclick="down()"></button>\
-            <button id="c" onclick="down()"></button>\
+            <button id="a" onclick="mapDown()"></button>\
+            <button id="b" onclick="mapDown()"></button>\
+            <button id="c" onclick="mapDown()"></button>\
         </div>';
 }
 
 var main = document.querySelector("#map");
 var map = [document.querySelector("#beijing"), document.querySelector("#china"), document.querySelector("#world")];
 
-var upButton = document.querySelector("#up");
+var mapUp = document.querySelector("#mapUp");
 
 var level = 0;
 
@@ -31,22 +31,22 @@ function updateMap() {
     }
 }
 
-function up() {
+function mapUp() {
     if (level < 2) {
         level++;
     }
 
     if (level == 2) {
-        upButton.style.display = "none";
+        mapUp.style.display = "none";
     }
     else {
-        upButton.style.display = "flex";
+        mapUp.style.display = "flex";
     }
 
     updateMap();
 }
 
-function down() {
+function mapDown() {
     if (level > 0) {
         level--;
     }
@@ -54,7 +54,7 @@ function down() {
         showInfo("thc");
     }
 
-    upButton.style.display = "flex";
+    mapUp.style.display = "flex";
 
     updateMap();
 }
@@ -90,28 +90,4 @@ window.onmousemove = function (e) {
 
 main.onmouseup = function () {
     isDown = false;
-}
-
-var info = document.querySelector("#info");
-
-function resizeInfo() {
-    var height = document.documentElement.clientHeight;
-
-    info.style.height = height + "px";
-}
-
-function onloadOther() {
-    resizeInfo();
-}
-
-function onresizeOther() {
-    resizeInfo();
-}
-
-function showInfo(name) {
-    info.style.display = "flex";
-}
-
-function hideInfo() {
-    info.style.display = "none";
-}   
+}  
