@@ -29,16 +29,29 @@ $max-width-3: 1200px;
 
 	img {
 		width: 2rem;
+
+		margin: 0.5rem;
 	}
 
 	button {
 		border-style: none;
 		background-color: none;
 
-		width: 1rem;
-
 		img {
 			width: 1rem;
+		}
+	}
+
+	#schoolPart {
+		display: flex;
+	}
+
+	#peoplePart {
+		display: flex;
+		flex-direction: column;
+
+		.individual {
+			display: flex;
 		}
 	}
 

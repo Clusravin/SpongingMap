@@ -65,8 +65,10 @@ function infoDown() {
 
 function writeSchoolInfo(i) {
     schoolPart.innerHTML = '<img id="emblem" class="school" src="images/school emblem/' + i + '.jpeg">\
+        <div>\
         <h3 id="name" class="school">' + school[i].name + '</h3>\
-        <a id="location" class="school" href="' + school[i].url + '" target="_blank">' + school[i].location + '</a>';
+        <a id="location" class="school" href="' + school[i].url + '" target="_blank">' + school[i].location + '</a>\
+        </div>';
 }
 
 function writePeopleList(i) {
@@ -85,19 +87,29 @@ function writePeopleList(i) {
 }
 
 function addPeopleInfo(i) {
-    peoplePart.innerHTML += '<img id="photo" class="people" src="images/profile photo/' + i + '.jpeg">\
-        <h3 id="name" class="people">' + people[i].name + '</h3>';
+    peoplePart.innerHTML += '<div class="individual">\
+        <img id="photo" class="people" src="images/profile photo/' + i + '.jpeg">\
+        <div>\
+        <h3 id="name" class="people">' + people[i].name + '</h3>\
+        </div>\
+        </div>';
 
     if (typeof (people[i].major) != "undefined") {
-        peoplePart.innerHTML += '<p id="major" class="people">' + people[i].major + '</p>';
+        peoplePart.innerHTML = peoplePart.innerHTML.substring(0, peoplePart.innerHTML.length - 22) + '<p id="major" class="people">' + people[i].major + '</p>\
+            </div>\
+            </div>';
     }
 
     if (typeof (people[i].position) != "undefined") {
-        peoplePart.innerHTML += '<p id="position" class="people">' + people[i].position + '</p>';
+        peoplePart.innerHTML = peoplePart.innerHTML.substring(0, peoplePart.innerHTML.length - 22) + '<p id="position" class="people">' + people[i].position + '</p>\
+            </div>\
+            </div>';
     }
 
     if (typeof (people[i].subject) != "undefined") {
-        peoplePart.innerHTML += '<p id="subject" class="people">' + people[i].subject + '</p>';
+        peoplePart.innerHTML = peoplePart.innerHTML.substring(0, peoplePart.innerHTML.length - 22) + '<p id="subject" class="people">' + people[i].subject + '</p>\
+            </div>\
+            </div>';
     }
 }
 
@@ -105,7 +117,7 @@ function showInfo(abbr) {
     if (abbr != schoolShown) {
         startNum = 0;
     }
-    
+
     info.style.display = "flex";
 
     schoolShown = abbr;
@@ -126,4 +138,4 @@ function showInfo(abbr) {
 
 function hideInfo() {
     info.style.display = "none";
-} 
+}

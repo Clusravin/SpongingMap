@@ -14,10 +14,10 @@ body {
     main {
         width: 100%;
 
-        cursor: move;
-
         #map {
             width: 100%;
+
+            cursor: move;
 
             .bee {
                 border-style: solid;
