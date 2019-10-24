@@ -65,9 +65,12 @@ function infoDown() {
 
 function writeSchoolInfo(i) {
     schoolPart.innerHTML = '<img id="emblem" class="school" src="images/school emblem/' + i + '.jpeg">\
-        <div>\
+        <div id="right">\
         <h3 id="name" class="school">' + school[i].name + '</h3>\
-        <a id="location" class="school" href="' + school[i].url + '" target="_blank">' + school[i].location + '</a>\
+        <div id="bottom">\
+        <p id="location" class="school">' + school[i].location + '</p>\
+        <a id="link" class="school" href="' + school[i].url + '" target="_blank">地图</a>\
+        </div>\
         </div>';
 }
 

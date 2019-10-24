@@ -14,7 +14,7 @@ $max-width-3: 1200px;
 	background-color: #fff;
 	border-color: #eee;
 
-	width: 20rem;
+	width: 25rem;
 	height: 0;
 
 	margin: 1rem 0 0 0;
@@ -45,8 +45,25 @@ $max-width-3: 1200px;
 			margin: 0.5rem;
 		}
 
-		a {
-			color: #000;
+		#right {
+			display: flex;
+			flex-direction: column;
+
+			#bottom {
+				display: flex;
+
+				#link {
+					color: #000;
+
+					border-style: solid;
+					border-radius: 5px;
+					border-width: 1px;
+					border-color: #555;
+
+					padding: 0 2px;
+					margin: 0 5px;
+				}
+			}
 		}
 	}
 
