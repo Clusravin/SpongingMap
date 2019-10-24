@@ -81,7 +81,7 @@ function writePeopleList(i) {
     for (var j = 0; j < people.length && found < startNum + listCapasity; j++) {
         if (people[j].school == school[i].name) {
             if (found >= startNum) {
-                addPeopleInfo(j);
+                addPeopleInfo(peoplePart, j, false, true, true, true);
             }
 
             found++;
@@ -89,28 +89,34 @@ function writePeopleList(i) {
     }
 }
 
-function addPeopleInfo(i) {
-    peoplePart.innerHTML += '<div class="individual">\
+function addPeopleInfo(container, i, includeSchool, includeMajor, includePosition, includeSubject) {
+    container.innerHTML += '<div class="individual">\
         <img id="photo" class="people" src="images/profile photo/' + i + '.jpeg">\
         <div>\
         <h3 id="name" class="people">' + people[i].name + '</h3>\
         </div>\
         </div>';
-
-    if (typeof (people[i].major) != "undefined") {
-        peoplePart.innerHTML = peoplePart.innerHTML.substring(0, peoplePart.innerHTML.length - 22) + '<p id="major" class="people">' + people[i].major + '</p>\
+ 
+    if (typeof (people[i].school) != "undefined" && includeSchool) {
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major" class="people">' + people[i].school + '</p>\
             </div>\
             </div>';
     }
 
-    if (typeof (people[i].position) != "undefined") {
-        peoplePart.innerHTML = peoplePart.innerHTML.substring(0, peoplePart.innerHTML.length - 22) + '<p id="position" class="people">' + people[i].position + '</p>\
+    if (typeof (people[i].major) != "undefined" && includeMajor) {
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major" class="people">' + people[i].major + '</p>\
             </div>\
             </div>';
     }
 
-    if (typeof (people[i].subject) != "undefined") {
-        peoplePart.innerHTML = peoplePart.innerHTML.substring(0, peoplePart.innerHTML.length - 22) + '<p id="subject" class="people">' + people[i].subject + '</p>\
+    if (typeof (people[i].position) != "undefined" && includePosition) {
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="position" class="people">' + people[i].position + '</p>\
+            </div>\
+            </div>';
+    }
+
+    if (typeof (people[i].subject) != "undefined" && includeSubject) {
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="subject" class="people">' + people[i].subject + '</p>\
             </div>\
             </div>';
     }
