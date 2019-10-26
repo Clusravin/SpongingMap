@@ -16,7 +16,7 @@ for (var i = 0; i < hive.length; i++) {
 var main = document.querySelector("#map");
 var map = [document.querySelector("#beijing"), document.querySelector("#china"), document.querySelector("#world")];
 
-var mapUp = document.querySelector("#mapUp");
+var mapUpButton = document.querySelector("#mapUp");
 
 var level = 0;
 
@@ -37,10 +37,10 @@ function mapUp() {
     }
 
     if (level == 2) {
-        mapUp.style.display = "none";
+        mapUpButton.style.display = "none";
     }
     else {
-        mapUp.style.display = "flex";
+        mapUpButton.style.display = "flex";
     }
 
     updateMap();
@@ -54,7 +54,7 @@ function mapDown() {
         showInfo("thc");
     }
 
-    mapUp.style.display = "flex";
+    mapUpButton.style.display = "flex";
 
     updateMap();
 }
