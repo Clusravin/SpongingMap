@@ -64,12 +64,14 @@ function infoDown() {
 }
 
 function writeSchoolInfo(i) {
-    schoolPart.innerHTML = '<img id="emblem" class="school" src="images/school emblem/' + i + '.jpeg">\
+    schoolPart.innerHTML = '<img id="emblem" src="images/school emblem/' + i + '.jpeg">\
         <div id="right">\
-        <h3 id="name" class="school">' + school[i].name + '</h3>\
+        <h3 id="name">' + school[i].name + '</h3>\
         <div id="bottom">\
-        <p id="location" class="school">' + school[i].location + '</p>\
-        <a id="link" class="school" href="' + school[i].url + '" target="_blank">地图</a>\
+        <p id="location">' + school[i].location + '</p>\
+        <a id="link" href="' + school[i].url + '" target="_blank">\
+        <img src="images/location.svg" alt="location">\
+        </a>\
         </div>\
         </div>';
 }
@@ -91,32 +93,32 @@ function writePeopleList(i) {
 
 function addPeopleInfo(container, i, includeSchool, includeMajor, includePosition, includeSubject) {
     container.innerHTML += '<div class="individual">\
-        <img id="photo" class="people" src="images/profile photo/' + i + '.jpeg">\
+        <img id="photo" src="images/profile photo/' + i + '.jpeg">\
         <div>\
-        <h3 id="name" class="people">' + people[i].name + '</h3>\
+        <h3 id="name">' + people[i].name + '</h3>\
         </div>\
         </div>';
  
     if (typeof (people[i].school) != "undefined" && includeSchool) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major" class="people">' + people[i].school + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major">' + people[i].school + '</p>\
             </div>\
             </div>';
     }
 
     if (typeof (people[i].major) != "undefined" && includeMajor) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major" class="people">' + people[i].major + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major">' + people[i].major + '</p>\
             </div>\
             </div>';
     }
 
     if (typeof (people[i].position) != "undefined" && includePosition) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="position" class="people">' + people[i].position + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="position">' + people[i].position + '</p>\
             </div>\
             </div>';
     }
 
     if (typeof (people[i].subject) != "undefined" && includeSubject) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="subject" class="people">' + people[i].subject + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="subject">' + people[i].subject + '</p>\
             </div>\
             </div>';
     }
