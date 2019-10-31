@@ -91,7 +91,7 @@ function writePeopleList(i) {
     }
 }
 
-function addPeopleInfo(container, i, includeSchool, includeMajor, includePosition, includeSubject) {
+function addPeopleInfo(container, i, schoolIncluded, majorIncluded, positionIncluded, subjectIncluded) {
     container.innerHTML += '<div class="individual">\
     <img id="photo" src="images/profile photo/' + i + '.jpeg">\
     <div>\
@@ -99,25 +99,25 @@ function addPeopleInfo(container, i, includeSchool, includeMajor, includePositio
     </div>\
     </div>';
  
-    if (typeof (people[i].school) != "undefined" && includeSchool) {
+    if (typeof (people[i].school) != "undefined" && schoolIncluded) {
         container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="major">' + people[i].school + '</p>\
         </div>\
         </div>';
     }
 
-    if (typeof (people[i].major) != "undefined" && includeMajor) {
+    if (typeof (people[i].major) != "undefined" && majorIncluded) {
         container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="major">' + people[i].major + '</p>\
         </div>\
         </div>';
     }
 
-    if (typeof (people[i].position) != "undefined" && includePosition) {
+    if (typeof (people[i].position) != "undefined" && positionIncluded) {
         container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="position">' + people[i].position + '</p>\
         </div>\
         </div>';
     }
 
-    if (typeof (people[i].subject) != "undefined" && includeSubject) {
+    if (typeof (people[i].subject) != "undefined" && subjectIncluded) {
         container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="subject">' + people[i].subject + '</p>\
         </div>\
         </div>';
