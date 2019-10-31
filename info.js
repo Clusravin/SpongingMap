@@ -100,25 +100,25 @@ function addPeopleInfo(container, i, includeSchool, includeMajor, includePositio
     </div>';
  
     if (typeof (people[i].school) != "undefined" && includeSchool) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major">' + people[i].school + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="major">' + people[i].school + '</p>\
         </div>\
         </div>';
     }
 
     if (typeof (people[i].major) != "undefined" && includeMajor) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="major">' + people[i].major + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="major">' + people[i].major + '</p>\
         </div>\
         </div>';
     }
 
     if (typeof (people[i].position) != "undefined" && includePosition) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="position">' + people[i].position + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="position">' + people[i].position + '</p>\
         </div>\
         </div>';
     }
 
     if (typeof (people[i].subject) != "undefined" && includeSubject) {
-        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 22) + '<p id="subject">' + people[i].subject + '</p>\
+        container.innerHTML = container.innerHTML.substring(0, container.innerHTML.length - 16) + '<p id="subject">' + people[i].subject + '</p>\
         </div>\
         </div>';
     }
