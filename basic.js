@@ -10,36 +10,37 @@ var navRight = document.querySelector("#nav-right");
 
 function insertNav() {
     nav.innerHTML = '<div id="nav-left">\
-            <button class="hidden" type="button">\
-                <img src="images/menu.svg" alt="menu">\
-            </button>\
-            \
-            <h1>\
-                <a href="index.html">直升机班的蹭饭地图</a>\
-            </h1>\
-            \
-            <button type="button" onclick="toggleMenu()">\
-                <img src="images/menu.svg" alt="menu">\
-            </button>\
-        </div>\
-        \
-        <div id="nav-right">\
-            <ul>\
-                <li class="tablet-border-bottom">\
-                    <a href="namelist.html">花名册</a>\
-                </li>\
-                <li class="tablet-border-bottom">\
-                    <a href="major.html">蹭专业</a>\
-                </li>\
-                <li class="tablet-border-bottom">\
-                    <a href="https://martaincreature.github.io/ClassWeekly/" target="_blank">往期周记</a>\
-                </li>\
-                <li>\
-                    <a href="https://github.com/MartainCreature/SpongingMap" target="_blank"><img src="images/github.svg"\
-                            alt="github"></img></a>\
-                </li>\
-            </ul>\
-        </div>';
+    <button class="hidden" type="button">\
+    <img src="images/menu.svg" alt="menu">\
+    </button>\
+    \
+    <h1>\
+    <a href="index.html">直升机班的蹭饭地图</a>\
+    </h1>\
+    \
+    <button type="button" onclick="toggleMenu()">\
+    <img src="images/menu.svg" alt="menu">\
+    </button>\
+    </div>\
+    \
+    <div id="nav-right">\
+    <ul>\
+    <li class="tablet-border-bottom">\
+    <a href="namelist.html">花名册</a>\
+    </li>\
+    <li class="tablet-border-bottom">\
+    <a href="major.html">蹭专业</a>\
+    </li>\
+    <li class="tablet-border-bottom">\
+    <a href="https://martaincreature.github.io/ClassWeekly/" target="_blank">往期周记</a>\
+    </li>\
+    <li>\
+    <a href="https://github.com/MartainCreature/SpongingMap" target="_blank">\
+    <img src="images/github.svg" alt="github"></img>\
+    </a>\
+    </li>\
+    </ul>\
+    </div>';
 }
 
 function insertCopyright() {
