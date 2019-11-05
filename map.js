@@ -16,7 +16,7 @@ for (var i = 0; i < hive.length; i++) {
 var main = document.querySelector("#map");
 var map = [document.querySelector("#beijing"), document.querySelector("#china"), document.querySelector("#world")];
 
-var mapUpButton = document.querySelector("#mapUp");
+var zoomOutButton = document.querySelector("#zoomOut");
 
 var level = 0;
 
@@ -31,16 +31,16 @@ function updateMap() {
     }
 }
 
-function mapUp() {
+function zoomOut() {
     if (level < 2) {
         level++;
     }
 
     if (level == 2) {
-        mapUpButton.style.display = "none";
+        zoomOutButton.style.display = "none";
     }
     else {
-        mapUpButton.style.display = "flex";
+        zoomOutButton.style.display = "flex";
     }
 
     updateMap();
@@ -54,7 +54,7 @@ function mapDown() {
         showInfo("thc");
     }
 
-    mapUpButton.style.display = "flex";
+    zoomOutButton.style.display = "flex";
 
     updateMap();
 }
