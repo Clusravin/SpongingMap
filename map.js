@@ -2,14 +2,14 @@ var hive = document.querySelectorAll(".hive");
 
 for (var i = 0; i < hive.length; i++) {
     hive[i].innerHTML = '<div id="outer">\
-    <button id="a" onclick="mapDown()"></button>\
-    <button id="b" onclick="mapDown()"></button>\
-    <button id="c" onclick="mapDown()"></button>\
+    <button id="a" onclick="zoomIn()"></button>\
+    <button id="b" onclick="zoomIn()"></button>\
+    <button id="c" onclick="zoomIn()"></button>\
     </div>\
     <div id="inner">\
-    <button id="a" onclick="mapDown()"></button>\
-    <button id="b" onclick="mapDown()"></button>\
-    <button id="c" onclick="mapDown()"></button>\
+    <button id="a" onclick="zoomIn()"></button>\
+    <button id="b" onclick="zoomIn()"></button>\
+    <button id="c" onclick="zoomIn()"></button>\
     </div>';
 }
 
@@ -46,7 +46,7 @@ function zoomOut() {
     updateMap();
 }
 
-function mapDown() {
+function zoomIn() {
     if (level > 0) {
         level--;
     }
