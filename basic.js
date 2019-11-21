@@ -119,14 +119,14 @@ function insertCopyright() {
 
 var main = document.querySelector(".main");
 
-function resizeMain() {
+function fillUp(container) {
     var height = document.documentElement.clientHeight;
 
-    main.style.height = height - (4 + 2) * 16 + "px";
+    container.style.height = height - (4 + 2) * 16 + "px";
 }
 
 window.onload = function() {
-    resizeMain();
+    fillUp(main);
     
     insertNav();
 
@@ -136,7 +136,7 @@ window.onload = function() {
 }
 
 window.onresize = function() {
-    resizeMain();
+    fillUp(main);
     
     updateMenu();
 
