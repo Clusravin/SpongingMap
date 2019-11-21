@@ -51,9 +51,9 @@ class List {
     
         this.classShown = clss;
     
-        this.search(clss);
-    
         this.updateButton();
+
+        this.search(clss);
     }
 }
 
