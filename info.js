@@ -55,9 +55,9 @@ function writePeopleList(i) {
     info_peoplePart.innerHTML = "";
 
     var found = 0;
-    for (var j = 0; j < people.length && found < info.startNum + listCapasity; j++) {
+    for (var j = 0; j < people.length && found < infoList.startNum + listCapasity; j++) {
         if (people[j].school == school[i].name) {
-            if (found >= info.startNum) {
+            if (found >= infoList.startNum) {
                 addPeopleInfo(info_peoplePart, j, false, true, true, true);
             }
 
