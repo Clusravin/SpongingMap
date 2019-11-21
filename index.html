@@ -26,19 +26,19 @@
 
                 <div id="thc" class="hive"></div>
 
-                <button id="bjfu" class="bee" onclick="showInfo('bjfu')"></button>
-                <button id="ustb" class="bee" onclick="showInfo('ustb')"></button>
-                <button id="buaa" class="bee" onclick="showInfo('buaa')"></button>
-                <button id="bfa" class="bee" onclick="showInfo('bfa')"></button>
-                <button id="bit" class="bee" onclick="showInfo('bit')"></button>
-                <button id="bucea" class="bee" onclick="showInfo('bucea')"></button>
-                <button id="btbu" class="bee" onclick="showInfo('btbu')"></button>
-                <button id="cuc" class="bee" onclick="showInfo('cuc')"></button>
-                <button id="bisu" class="bee" onclick="showInfo('bisu')"></button>
-                <button id="cnu" class="bee" onclick="showInfo('cnu')"></button>
-                <button id="bjut" class="bee" onclick="showInfo('bjut')"></button>
-                <button id="cmu" class="bee" onclick="showInfo('cmu')"></button>
-                <button id="cueb" class="bee" onclick="showInfo('cueb')"></button>
+                <button id="bjfu" class="bee" onclick="info.show('bjfu')"></button>
+                <button id="ustb" class="bee" onclick="info.show('ustb')"></button>
+                <button id="buaa" class="bee" onclick="info.show('buaa')"></button>
+                <button id="bfa" class="bee" onclick="info.show('bfa')"></button>
+                <button id="bit" class="bee" onclick="info.show('bit')"></button>
+                <button id="bucea" class="bee" onclick="info.show('bucea')"></button>
+                <button id="btbu" class="bee" onclick="info.show('btbu')"></button>
+                <button id="cuc" class="bee" onclick="info.show('cuc')"></button>
+                <button id="bisu" class="bee" onclick="info.show('bisu')"></button>
+                <button id="cnu" class="bee" onclick="info.show('cnu')"></button>
+                <button id="bjut" class="bee" onclick="info.show('bjut')"></button>
+                <button id="cmu" class="bee" onclick="info.show('cmu')"></button>
+                <button id="cueb" class="bee" onclick="info.show('cueb')"></button>
             </div>
 
             <div id="china">
@@ -46,13 +46,13 @@
 
                 <div id="beijing_all" class="hive"></div>
 
-                <button id="jilin_jlu" class="bee" onclick="showInfo('jlu')"></button>
-                <button id="tianjin_nku" class="bee" onclick="showInfo('nku')"></button>
-                <button id="shanxi_tyut" class="bee" onclick="showInfo('tyut')"></button>
-                <button id="hubei_whu" class="bee" onclick="showInfo('whu')"></button>
-                <button id="chongqing_cqu" class="bee" onclick="showInfo('cqu')"></button>
-                <button id="hunan_nudt" class="bee" onclick="showInfo('nudt')"></button>
-                <button id="guangdong_sysu" class="bee" onclick="showInfo('sysu')"></button>
+                <button id="jilin_jlu" class="bee" onclick="info.show('jlu')"></button>
+                <button id="tianjin_nku" class="bee" onclick="info.show('nku')"></button>
+                <button id="shanxi_tyut" class="bee" onclick="info.show('tyut')"></button>
+                <button id="hubei_whu" class="bee" onclick="info.show('whu')"></button>
+                <button id="chongqing_cqu" class="bee" onclick="info.show('cqu')"></button>
+                <button id="hunan_nudt" class="bee" onclick="info.show('nudt')"></button>
+                <button id="guangdong_sysu" class="bee" onclick="info.show('sysu')"></button>
             </div>
 
             <div id="world">
@@ -60,7 +60,7 @@
 
                 <div id="china_all" class="hive"></div>
 
-                <button id="ireland_ucd" class="bee" onclick="showInfo('ucd')"></button>
+                <button id="ireland_ucd" class="bee" onclick="info.show('ucd')"></button>
             </div>
 
             <button id="zoomOut" onclick="zoomOut()">
@@ -70,11 +70,11 @@
         <div id="info">
             <div id="schoolPart"></div>
 
-            <button id="infoUp" onclick="infoUp()">
+            <button id="infoUp" onclick="info.up()">
                 <img src="images/infoUp.svg" alt="infoUp">
             </button>
             <div id="peoplePart"></div>
-            <button id="infoDown" onclick="infoDown()">
+            <button id="infoDown" onclick="info.down()">
                 <img src="images/infoDown.svg" alt="infoDown">
             </button>
 

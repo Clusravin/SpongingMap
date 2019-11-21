@@ -1,9 +1,9 @@
-var info = document.querySelector("#info");
+var infoContainer = document.querySelector("#info");
 
 function resizeInfo() {
     var height = document.documentElement.clientHeight;
 
-    info.style.height = height + "px";
+    infoContainer.style.height = height + "px";
 }
 
 function onloadOther() {
@@ -21,46 +21,80 @@ function onresizeOther() {
 var schoolPart = document.querySelector("#info>#schoolPart");
 var peoplePart = document.querySelector("#peoplePart");
 
+var infoUp = document.querySelector("#infoUp");
+var infoDown = document.querySelector("#infoDown");
+
+class List {
+    constructor(container, upButton, downButton) {
+        this.container = container;
+        this.upButton = upButton;
+        this.downButton = downButton;
+
+        this.startNum = 0;
+        this.quantity = 0;
+        this.classShown = "";
+    }
+
+    updateButton() {
+        if (this.startNum > 0) {
+            this.upButton.style.visibility = "visible";
+        }
+        else {
+            this.upButton.style.visibility = "hidden";
+        }
+    
+        if (this.startNum + listCapasity < this.quantity) {
+            this.downButton.style.visibility = "visible";
+        }
+        else {
+            this.downButton.style.visibility = "hidden";
+        }
+    }
+
+    up() {
+        this.startNum -= listCapasity;
+    
+        this.show(this.classShown);
+    }
+    
+    down() {
+        this.startNum += listCapasity;
+    
+        this.show(this.classShown);
+    }
+
+    show(clss) {
+        if (clss != this.classShown) {
+            this.startNum = 0;
+        }
+    
+        this.classShown = clss;
+    
+        this.container.style.display = "flex";
+
+        for (var i = 0; i < school.length; i++) {
+            if (school[i].abbr == clss) {
+                writeSchoolInfo(i);
+                writePeopleList(i);
+    
+                this.quantity = school[i].quantity;
+    
+                break;
+            }
+        }
+    
+        this.updateButton();
+    }
+}
+
+var info = new List(infoContainer, infoUp, infoDown);
+
 var listCapasity = 0;
-var startNum = 0;
-var quantity = 0;
-var schoolShown;
 
 function getListCapasity() {
     var height = document.body.clientHeight;
 
     listCapasity = parseInt(height / 100);
-}
-
-function updateUDButton() {
-    var infoUp = document.querySelector("#infoUp");
-    var infoDown = document.querySelector("#infoDown");
-
-    if (startNum > 0) {
-        infoUp.style.visibility = "visible";
-    }
-    else {
-        infoUp.style.visibility = "hidden";
-    }
-
-    if (startNum + listCapasity < quantity) {
-        infoDown.style.visibility = "visible";
-    }
-    else {
-        infoDown.style.visibility = "hidden";
-    }
-}
-
-function infoUp() {
-    startNum -= listCapasity;
-
-    showInfo(schoolShown);
-}
-
-function infoDown() {
-    startNum += listCapasity;
-
-    showInfo(schoolShown);
 }
 
 function writeSchoolInfo(i) {
@@ -80,9 +114,9 @@ function writePeopleList(i) {
     peoplePart.innerHTML = "";
 
     var found = 0;
-    for (var j = 0; j < people.length && found < startNum + listCapasity; j++) {
+    for (var j = 0; j < people.length && found < info.startNum + listCapasity; j++) {
         if (people[j].school == school[i].name) {
-            if (found >= startNum) {
+            if (found >= info.startNum) {
                 addPeopleInfo(peoplePart, j, false, true, true, true);
             }
 
@@ -124,29 +158,6 @@ function addPeopleInfo(container, i, schoolIncluded, majorIncluded, positionIncl
     }
 }
 
-function showInfo(abbr) {
-    if (abbr != schoolShown) {
-        startNum = 0;
-    }
-
-    info.style.display = "flex";
-
-    schoolShown = abbr;
-
-    for (var i = 0; i < school.length; i++) {
-        if (school[i].abbr == abbr) {
-            writeSchoolInfo(i);
-            writePeopleList(i);
-
-            quantity = school[i].quantity;
-
-            break;
-        }
-    }
-
-    updateUDButton();
-}
-
 function hideInfo() {
-    info.style.display = "none";
+    info.container.style.display = "none";
 }

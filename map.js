@@ -51,7 +51,7 @@ function zoomIn() {
         level--;
     }
     else {
-        showInfo("thc");
+        info.show("thc");
     }
 
     zoomOutButton.style.display = "flex";
