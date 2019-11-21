@@ -70,24 +70,28 @@ class List {
     
         this.classShown = clss;
     
-        this.container.style.display = "flex";
-
-        for (var i = 0; i < school.length; i++) {
-            if (school[i].abbr == clss) {
-                writeSchoolInfo(i);
-                writePeopleList(i);
-    
-                this.quantity = school[i].quantity;
-    
-                break;
-            }
-        }
+        this.search(clss);
     
         this.updateButton();
     }
 }
 
 var info = new List(infoContainer, infoUp, infoDown);
+
+info.search = function(clss) {
+    info.container.style.display = "flex";
+
+    for (var i = 0; i < school.length; i++) {
+        if (school[i].abbr == clss) {
+            writeSchoolInfo(i);
+            writePeopleList(i);
+
+            this.quantity = school[i].quantity;
+
+            break;
+        }
+    }
+}
 
 var listCapasity = 0;
 
