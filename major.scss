@@ -1,0 +1,28 @@
+body {
+    main {
+        #major {
+            display: flex;
+
+            #catalog {
+                display: flex;
+                flex-direction: column;
+
+                button {
+                    border-style: none;
+                }
+            }
+
+            #content {
+                border-style: none none none solid;
+                border-width: 2px;
+                border-color: #eee;
+                
+                visibility: hidden;
+
+                button {
+                    border-style: none;
+                }
+            }
+        }
+    }
+}

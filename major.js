@@ -1,6 +1,22 @@
 var majorList = new List(document.querySelector("#major>#content>#majorUp"), document.querySelector("#major>#content>#majorDown"));
 
+majorList.applyButtonEffect = function(clss) {
+    if (this.classShown != "") {
+        var previousButton = document.querySelector("#major>#catalog>#" + this.classShown);
+
+        previousButton.style.background = "#fff";
+    }
+
+    var button = document.querySelector("#major>#catalog>#" + clss);
+    
+    button.style.background = "#ccc";
+}
+
+var content = document.querySelector("#major>#content");
+
 majorList.search = function(clss) {
+    content.style.visibility = "visible";
+
     for (var i = 0; i < major.length; i++) {
         if (major[i].abbr == clss) {
             writePeopleList(i);

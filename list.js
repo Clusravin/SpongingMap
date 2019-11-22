@@ -45,6 +45,8 @@ class List {
     }
 
     show(clss) {
+        this.applyButtonEffect(clss);
+
         if (clss != this.classShown) {
             this.startNum = 0;
         }
@@ -55,6 +57,8 @@ class List {
 
         this.search(clss);
     }
+    
+    applyButtonEffect() {}
 }
 
 function addPeopleInfo(container, i, schoolIncluded, majorIncluded, positionIncluded, subjectIncluded) {
