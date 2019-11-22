@@ -23,7 +23,7 @@ class List {
         else {
             this.upButton.style.visibility = "hidden";
         }
-    
+
         if (this.startNum + listCapasity < this.quantity) {
             this.downButton.style.visibility = "visible";
         }
@@ -52,10 +52,10 @@ class List {
         }
     
         this.classShown = clss;
-    
-        this.updateButton();
 
         this.search(clss);
+        
+        this.updateButton();
     }
     
     applyButtonEffect() {}
