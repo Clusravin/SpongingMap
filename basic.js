@@ -29,7 +29,7 @@ function insertNav() {
     <a href="namelist.html">花名册</a>\
     </li>\
     <li class="tablet-border-bottom">\
-    <a href="major.html">蹭专业</a>\
+    <a href="major.html">专业</a>\
     </li>\
     <li class="tablet-border-bottom">\
     <a href="https://martaincreature.github.io/ClassWeekly/" target="_blank">往期周记</a>\
