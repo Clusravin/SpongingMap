@@ -1,8 +1,8 @@
-var namelistList = new List(document.querySelector("#namelistUp"), document.querySelector("#namelistDown"));
+var namelistList = new List(document.querySelector("#namelist>#namelistUp"), document.querySelector("#namelist>#namelistDown"));
 
 namelistList.quantity = 39;
 
-var namelist_peoplePart = document.querySelector("#peoplePart");
+var namelist_peoplePart = document.querySelector("#namelist>#peoplePart");
 
 namelistList.search = function(clss) {
     namelist_peoplePart.innerHTML = "";
