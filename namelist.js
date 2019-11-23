@@ -7,7 +7,7 @@ var namelist_peoplePart = document.querySelector("#namelist>#peoplePart");
 namelistList.search = function(clss) {
     namelist_peoplePart.innerHTML = "";
 
-    for (var i = 0; i < people.length && i < listCapasity; i++) {
+    for (var i = 0; i + namelistList.startNum < people.length && i < listCapasity; i++) {
         addPeopleInfo(namelist_peoplePart, i + namelistList.startNum, true, true, true, true);
     }
 }
