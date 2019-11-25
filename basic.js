@@ -43,6 +43,8 @@ function insertNav() {
     </div>';
 }
 
+var copyright = document.querySelector("#copyright");
+
 function insertCopyright() {
     var date = new Date;
     var year = date.getFullYear();
@@ -106,15 +108,6 @@ function updateMenu() {
         navRight.style.height = navRightHeightFolded;
         navRight.style.visibility = "hidden";
     }
-}
-
-var copyright = document.querySelector("#copyright");
-
-function insertCopyright() {
-    var date = new Date;
-    var year = date.getFullYear();
-
-    copyright.innerHTML = "<p>&copy; " + year + " 范子睿</p>";
 }
 
 var main = document.querySelector(".main");
