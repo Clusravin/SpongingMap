@@ -5,8 +5,17 @@ let navRightHeightExpanded = "16rem";
 let navRightHeightDefault = "1.5rem";
 
 var nav = document.querySelector("#nav");
+
+insertNav();
+
 var navLeft = document.querySelector("#nav-left");
 var navRight = document.querySelector("#nav-right");
+
+var copyright = document.querySelector("#copyright");
+
+insertCopyright();
+
+var main = document.querySelector(".main");
 
 function insertNav() {
     nav.innerHTML = '<div id="nav-left">\
@@ -43,8 +52,6 @@ function insertNav() {
     </div>';
 }
 
-var copyright = document.querySelector("#copyright");
-
 function insertCopyright() {
     var date = new Date;
     var year = date.getFullYear();
@@ -57,11 +64,6 @@ function insertCopyright() {
     }
 }
 
-function resizeMain() {
-    var height = document.documentElement.clientHeight;
-
-    main.style.height = height - (4 + 2) * 16 + "px";
-}
 
 function menuIsFolded() {
     if (nav.style.height == navHeightFolded) {
@@ -110,8 +112,6 @@ function updateMenu() {
     }
 }
 
-var main = document.querySelector(".main");
-
 function fillUp(container) {
     var height = document.documentElement.clientHeight;
 
@@ -120,10 +120,6 @@ function fillUp(container) {
 
 window.onload = function() {
     fillUp(main);
-    
-    insertNav();
-
-    insertCopyright();
 
     onloadOther();
 }
