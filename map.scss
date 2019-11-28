@@ -7,15 +7,13 @@ $max-width-2: 992px;
 $max-width-3: 1200px;
 
 body {
-    overflow: hidden;
-
     background-color: #fff;
 
     main {
         width: 100%;
 
         #map {
-            width: 100%;
+            width: 0;
 
             cursor: move;
 
@@ -243,7 +241,7 @@ body {
                 border-style: none;
                 border-radius: 0;
 
-                position: absolute;
+                position: fixed;
                 top: 6rem;
                 left: 0;
 
