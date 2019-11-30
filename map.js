@@ -69,14 +69,14 @@ function zoomOut() {
 function zoomIn() {
     if (level > 0) {
         level--;
+        
+        updateMap();
     }
     else {
         infoList.show("thc");
     }
 
     zoomOutButton.style.display = "flex";
-
-    updateMap();
 }
 
 var x0, y0;
