@@ -1,4 +1,5 @@
 $basic: #673ab7;
+$basic-light: #d1c4e9;
 $primary: #ffc108;
 $primary-light: #ffda6d;
 
@@ -7,13 +8,19 @@ $max-width-2: 992px;
 $max-width-3: 1200px;
 
 body {
-    background-color: #fff;
-
+    overflow: hidden;
+    
     main {
         width: 100%;
 
+        overflow: hidden;
+
         #map {
-            width: 0;
+            width: 100%;
+
+            background-color: $basic-light;
+
+            overflow: hidden;
 
             cursor: move;
 
@@ -74,9 +81,9 @@ body {
                 width: 100%;
 
                 position: absolute;
-                top: -190rem;
-                left: -100rem;
 
+                overflow: scroll;
+                
                 img {
                     width: 300rem;
                 }
@@ -158,8 +165,8 @@ body {
                 width: 100%;
 
                 position: absolute;
-                top: -10rem;
-                left: -35rem;
+
+                overflow: scroll;
 
                 display: none;
 
@@ -215,8 +222,8 @@ body {
                 width: 100%;
 
                 position: absolute;
-                top: -10rem;
-                left: -60rem;
+
+                overflow: scroll;
 
                 display: none;
 

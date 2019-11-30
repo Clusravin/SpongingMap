@@ -7,12 +7,20 @@ function fillUp(container) {
 }
 
 function onloadOther() {
+    fillUp(map[0]);
+    fillUp(map[1]);
+    fillUp(map[2]);
+
     fillUp(infoContainer);
 
     getListCapasity();
 }
 
 function onresizeOther() {
+    fillUp(map[0]);
+    fillUp(map[1]);
+    fillUp(map[2]);
+
     fillUp(infoContainer);
 
     getListCapasity();

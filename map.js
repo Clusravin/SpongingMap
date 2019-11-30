@@ -20,6 +20,12 @@ var zoomOutButton = document.querySelector("#zoomOut");
 
 var level = 0;
 
+fillUp(map[0]);
+fillUp(map[1]);
+fillUp(map[2]);
+
+updateMap();
+
 function updateMap() {
     for (var i = 0; i < 3; i++) {
         if (i == level) {
@@ -28,6 +34,20 @@ function updateMap() {
         else {
             map[i].style.display = "none";
         }
+    }
+    
+    switch (level) {
+        case 0:
+            map[0].scrollTop = 3000;
+            map[0].scrollLeft = 1500;
+
+        case 1:
+            map[1].scrollTop = 300;
+            map[1].scrollLeft = 1000;
+            
+        case 2:
+            map[2].scrollTop = 200;
+            map[2].scrollLeft = 1000;
     }
 }
 
@@ -69,9 +89,6 @@ main.onmousedown = function (e) {
     x0 = e.clientX;
     y0 = e.clientY;
 
-    left0 = map[level].offsetLeft;
-    top0 = map[level].offsetTop;
-
     isDown = true;
 }
 
@@ -80,11 +97,11 @@ window.onmousemove = function (e) {
         var x = e.clientX;
         var y = e.clientY;
 
-        var left = x - (x0 - left0);
-        var top = y - (y0 - top0);
+        var left = x0 - x;
+        var top = y0 - y;
 
-        map[level].style.left = left + 'px';
-        map[level].style.top = top + 'px';
+        map[level].scrollLeft += left / 50;
+        map[level].scrollTop += top / 50;
     }
 }
 
