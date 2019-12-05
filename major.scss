@@ -1,28 +1,28 @@
-body {
-    main {
-        #major {
-            display: flex;
+#major {
+	display: flex;
 
-            #catalog {
-                display: flex;
-                flex-direction: column;
+	overflow: hidden;
 
-                button {
-                    border-style: none;
-                }
-            }
+	#catalog {
+		display: flex;
+		flex-direction: column;
 
-            #content {
-                border-style: none none none solid;
-                border-width: 2px;
-                border-color: #eee;
-                
-                visibility: hidden;
+		button {
+			border-style: none;
+		}
+	}
 
-                button {
-                    border-style: none;
-                }
-            }
-        }
-    }
+	#content {
+		border-style: none none none solid;
+		border-width: 2px;
+		border-color: #eee;
+
+		overflow: scroll;
+
+		visibility: hidden;
+
+		button {
+			border-style: none;
+		}
+	}
 }

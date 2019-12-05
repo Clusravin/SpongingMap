@@ -1,8 +1,8 @@
-var majorList = new List(document.querySelector("#major>#content>#majorUp"), document.querySelector("#major>#content>#majorDown"));
+var classShown = "";
 
-majorList.applyButtonEffect = function(clss) {
-    if (this.classShown != "") {
-        var previousButton = document.querySelector("#major>#catalog>#" + this.classShown);
+function applyButtonEffect(clss) {
+    if (classShown != "") {
+        var previousButton = document.querySelector("#major>#catalog>#" + classShown);
 
         previousButton.style.background = "#fff";
     }
@@ -14,18 +14,20 @@ majorList.applyButtonEffect = function(clss) {
 
 var content = document.querySelector("#major>#content");
 
-majorList.search = function(clss) {
+function showMajor(clss) {
     content.style.visibility = "visible";
 
     for (var i = 0; i < major.length; i++) {
         if (major[i].abbr == clss) {
             writePeopleList(i);
 
-            this.quantity = major[i].quantity;
-
             break;
         }
     }
+
+    applyButtonEffect(clss);
+
+    classShown = clss;
 }
 
 var major_peoplePart = document.querySelector("#major>#content>#peoplePart");
@@ -33,15 +35,10 @@ var major_peoplePart = document.querySelector("#major>#content>#peoplePart");
 function writePeopleList(i) {
     major_peoplePart.innerHTML = "";
 
-    var found = 0;
     for (var j = 0; j < major[i].major.length; j++) {
-        for (var k = 0; k < people.length && found < majorList.startNum + listCapasity; k++) {
+        for (var k = 0; k < people.length; k++) {
             if (people[k].major == major[i].major[j]) {
-                if (found >= majorList.startNum) {
-                    addPeopleInfo(major_peoplePart, k, true, true, false, false);
-                }
-
-                found++;
+                addPeopleInfo(major_peoplePart, k, true, true, false, false);
             }
         }
     }

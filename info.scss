@@ -70,6 +70,8 @@ $max-width-3: 1200px;
 	#peoplePart {
 		display: flex;
 		flex-direction: column;
+
+		overflow: scroll;
 	}
 
 	#hideInfo {

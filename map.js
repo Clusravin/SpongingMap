@@ -73,7 +73,7 @@ function zoomIn() {
         updateMap();
     }
     else {
-        infoList.show("thc");
+        showInfo("thc");
     }
 
     zoomOutButton.style.display = "flex";

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,SAAS,AAAC,CACN,QAAQ,CAAE,MAAM,CACnB",
     "sources": [
         "../namelist.scss"
     ],

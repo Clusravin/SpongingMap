@@ -6,8 +6,6 @@ function onloadOther() {
     fillUp(map[2]);
 
     fillUp(infoContainer);
-
-    getListCapasity();
 }
 
 function onresizeOther() {
@@ -16,21 +14,15 @@ function onresizeOther() {
     fillUp(map[2]);
 
     fillUp(infoContainer);
-
-    getListCapasity();
 }
 
-var infoList = new List(document.querySelector("#infoUp"), document.querySelector("#infoDown"));
-
-infoList.search = function(clss) {
+function showInfo(clss) {
     infoContainer.style.display = "flex";
 
     for (var i = 0; i < school.length; i++) {
         if (school[i].abbr == clss) {
             writeSchoolInfo(i);
             writePeopleList(i);
-
-            this.quantity = school[i].quantity;
 
             break;
         }
@@ -56,14 +48,9 @@ function writeSchoolInfo(i) {
 function writePeopleList(i) {
     info_peoplePart.innerHTML = "";
 
-    var found = 0;
-    for (var j = 0; j < people.length && found < infoList.startNum + listCapasity; j++) {
+    for (var j = 0; j < people.length; j++) {
         if (people[j].school == school[i].name) {
-            if (found >= infoList.startNum) {
-                addPeopleInfo(info_peoplePart, j, false, true, true, true);
-            }
-
-            found++;
+            addPeopleInfo(info_peoplePart, j, false, true, true, true);
         }
     }
 }
