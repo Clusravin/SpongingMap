@@ -119,13 +119,13 @@ function fillUp(container, footer) {
 }
 
 window.onload = function() {
-    fillUp(main, 0);
+    fillUp(main, 1);
 
     onloadOther();
 }
 
 window.onresize = function() {
-    fillUp(main, 0);
+    fillUp(main, 1);
     
     updateMenu();
 
