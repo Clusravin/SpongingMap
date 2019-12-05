@@ -1,11 +1,5 @@
 var infoContainer = document.querySelector("#info");
 
-function fillUp(container) {
-    var height = document.documentElement.clientHeight;
-
-    container.style.height = height + "px";
-}
-
 function onloadOther() {
     fillUp(map[0]);
     fillUp(map[1]);
