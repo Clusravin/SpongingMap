@@ -54,6 +54,8 @@ html {
     body {
         background-color: $bg-light-primary;
 
+        overflow: hidden;
+
         header {
             #nav {
                 width: 100%;
