@@ -25,11 +25,11 @@ function showInfo(clss) {
     }
 }
 
-var info_schoolPart = document.querySelector("#info>#schoolPart");
-var info_peoplePart = document.querySelector("#info>#peoplePart");
+var schoolPart = document.querySelector("#info>#schoolPart");
+var peoplePart = document.querySelector("#info>#peoplePart");
 
 function writeSchoolInfo(i) {
-    info_schoolPart.innerHTML = '<img id="emblem" src="images/school emblem/' + i + '.jpeg">\
+    schoolPart.innerHTML = '<img id="emblem" src="images/school emblem/' + i + '.jpeg">\
     <div id="right">\
     <h3 id="name">' + school[i].name + '</h3>\
     <div id="bottom">\
@@ -42,11 +42,11 @@ function writeSchoolInfo(i) {
 }
 
 function writePeopleList(i) {
-    info_peoplePart.innerHTML = "";
+    peoplePart.innerHTML = "";
 
     for (var j = 0; j < people.length; j++) {
         if (people[j].school == school[i].name) {
-            addPeopleInfo(info_peoplePart, j, false, true, true, true);
+            addPeopleInfo(peoplePart, j, false, true, true, true);
         }
     }
 }

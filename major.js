@@ -30,15 +30,15 @@ function showMajor(clss) {
     classShown = clss;
 }
 
-var major_peoplePart = document.querySelector("#major>#content>#peoplePart");
+var peoplePart = document.querySelector("#major>#content>#peoplePart");
 
 function writePeopleList(i) {
-    major_peoplePart.innerHTML = "";
+    peoplePart.innerHTML = "";
 
     for (var j = 0; j < major[i].major.length; j++) {
         for (var k = 0; k < people.length; k++) {
             if (people[k].major == major[i].major[j]) {
-                addPeopleInfo(major_peoplePart, k, true, true, false, false);
+                addPeopleInfo(peoplePart, k, true, true, false, false);
             }
         }
     }

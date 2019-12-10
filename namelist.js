@@ -1,10 +1,10 @@
-var namelist_peoplePart = document.querySelector("#namelist>#peoplePart");
+var peoplePart = document.querySelector("#namelist>#peoplePart");
 
 function showNamelist() {
-    namelist_peoplePart.innerHTML = "";
+    peoplePart.innerHTML = "";
 
     for (var i = 0; i < people.length; i++) {
-        addPeopleInfo(namelist_peoplePart, i, true, true, true, true);
+        addPeopleInfo(peoplePart, i, true, true, true, true);
     }
 }
 
