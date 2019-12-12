@@ -131,3 +131,7 @@ window.onresize = function() {
 
     onresizeOther();
 }
+
+window.onscroll = function() {
+    fillUp(main, 1);
+}
