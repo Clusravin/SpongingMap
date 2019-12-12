@@ -1,15 +1,20 @@
 var classShown = "";
 
 function applyButtonEffect(clss) {
+    var dark = "#616161";
+    var light = "#ffffff";
+
     if (classShown != "") {
         var previousButton = document.querySelector("#major>#catalog>#" + classShown);
 
-        previousButton.style.background = "#fff";
+        previousButton.style.background = light;
+        previousButton.style.color = "black";
     }
 
     var button = document.querySelector("#major>#catalog>#" + clss);
     
-    button.style.background = "#ccc";
+    button.style.background = dark;
+    button.style.color = light;    
 }
 
 var content = document.querySelector("#major>#content");
@@ -44,10 +49,6 @@ function writePeopleList(i) {
     }
 }
 
-function onloadOther() {
-    getListCapasity();
-}
+function onloadOther() {}
 
-function onresizeOther() {
-    getListCapasity();
-}
+function onresizeOther() {}

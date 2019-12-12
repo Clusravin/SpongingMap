@@ -20,11 +20,11 @@ var zoomOutButton = document.querySelector("#zoomOut");
 
 var level = 0;
 
-fillUp(main, 0);
+fillUp(main);
 
-fillUp(map[0], 0);
-fillUp(map[1], 0);
-fillUp(map[2], 0);
+fillUp(map[0]);
+fillUp(map[1]);
+fillUp(map[2]);
 
 updateMap();
 

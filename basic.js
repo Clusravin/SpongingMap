@@ -112,20 +112,20 @@ function updateMenu() {
     }
 }
 
-function fillUp(container, footer) {
+function fillUp(container) {
     var height = document.documentElement.clientHeight;
 
-    container.style.height = height - (4 + 2 * footer) * 16 + "px";
+    container.style.height = height + 10 + "px";
 }
 
 window.onload = function() {
-    fillUp(main, 1);
+    fillUp(main);
 
     onloadOther();
 }
 
 window.onresize = function() {
-    fillUp(main, 1);
+    fillUp(main);
     
     updateMenu();
 
@@ -133,5 +133,13 @@ window.onresize = function() {
 }
 
 window.onscroll = function() {
-    fillUp(main, 1);
+    fillUp(main);
+}
+
+window.onorientationchange = function() {
+    fillUp(main);
+    
+    updateMenu();
+
+    onresizeOther();
 }

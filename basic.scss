@@ -195,7 +195,6 @@ html {
                 height: 0;
 
                 margin: 4rem 0 0 0;
-                padding: 0 0 2rem 0;
 
                 background-color: $txt-light-primary;
 
@@ -229,8 +228,6 @@ html {
         footer {
             width: 100%;
 
-            margin: 0 0 0.5rem 0;
-
             position: fixed;
             bottom: 0;
             z-index: 1;
@@ -239,10 +236,19 @@ html {
             justify-content: center;
 
             #copyright {
+                width: 6rem;
+                height: 1.2rem;
+
+                background-color: $txt-dark-secondary;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
                 p {
                     font-size: 0.7rem;
 
-                    color: $txt-dark-secondary;
+                    color: #fff;
                 }
             }
         }
