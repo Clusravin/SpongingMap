@@ -41,7 +41,7 @@ function insertNav() {
     <a href="major.html">专业</a>\
     </li>\
     <li class="tablet-border-bottom">\
-    <a href="https://martaincreature.github.io/ClassWeekly/" target="_blank">往期周记</a>\
+    <a href="http://clusravin.gitee.io/classweekly" target="_blank">往期周记</a>\
     </li>\
     <li>\
     <a href="https://github.com/MartainCreature/SpongingMap" target="_blank">\
