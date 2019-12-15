@@ -33,6 +33,10 @@ html {
 
     h1 {
         font-size: 1.8rem;
+
+        @media (max-width: $max-width-1) {
+            font-size: 1.2rem;
+        }
     }
 
     a {
@@ -77,6 +81,10 @@ html {
                     flex-direction: column;
                     align-items: flex-end;
                 }
+
+                @media (max-width: $max-width-1) {
+                    height: 3rem;
+                }
     
                 #nav-left {
                     width: 25rem;
@@ -90,6 +98,10 @@ html {
     
                     @media (max-width: $max-width-2) {
                         width: 100%;
+                    }
+
+                    @media (max-width: $max-width-1) {
+                        height: 3rem;
                     }
     
                     h1 {
@@ -107,6 +119,11 @@ html {
     
                         background: transparent;
                         border: none;
+
+                        @media (max-width: $max-width-1) {
+                            margin: 0 1rem;
+                            padding: 0.3rem 0;
+                        }
     
                         img {
                             width: 1.6rem;
@@ -115,6 +132,10 @@ html {
     
                             @media (max-width: $max-width-2) {
                                 display: block;
+                            }
+
+                            @media (max-width: $max-width-1) {
+                                width: 1rem;
                             }
                         }
                     }
@@ -152,6 +173,10 @@ html {
                             justify-content: space-around;
                             align-items: center;
                         }
+
+                        @media (max-width: $max-width-1) {
+                            height: 12rem;
+                        }
     
                         li {
                             margin: 0 2rem 0 0;
@@ -169,6 +194,10 @@ html {
     
                             a {
                                 color: $txt-light-primary;
+
+                                @media (max-width: $max-width-1) {
+                                    font-size: 0.9rem;
+                                }
                                 
                                 img {
                                     width: 1.3rem;
@@ -177,6 +206,10 @@ html {
     
                                     @media (max-width: $max-width-2) {
                                         margin: 0;
+                                    }
+
+                                    @media (max-width: $max-width-1) {
+                                        width: 1rem;
                                     }
                                 }
                             }
@@ -208,6 +241,8 @@ html {
 
                 @media (max-width: $max-width-1) {
                     width: 30rem;
+
+                    margin: 3rem 0 0 0;
                 }
             }
 

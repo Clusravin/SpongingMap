@@ -1,7 +1,7 @@
-let navHeightFolded = "4rem";
-let navHeightExpanded = "20.1rem";
+let navHeightFolded = "3rem";
+let navHeightExpanded = "15.1rem";
 let navRightHeightFolded = "0";
-let navRightHeightExpanded = "16rem";
+let navRightHeightExpanded = "12rem";
 let navRightHeightDefault = "1.5rem";
 
 var nav = document.querySelector("#nav");
