@@ -49,6 +49,14 @@ function writePeopleList(i) {
     }
 }
 
-function onloadOther() {}
+var catalog = document.querySelector("#major>#catalog");
 
-function onresizeOther() {}
+function onloadOther() {
+    fillUp(catalog, 0);
+    fillUp(content, 0);
+}
+
+function onresizeOther() {
+    fillUp(catalog, 0);
+    fillUp(content, 0);
+}
