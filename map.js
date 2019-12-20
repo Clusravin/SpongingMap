@@ -83,7 +83,7 @@ function zoomIn() {
 
 var x0, y0;
 var left0, top0;
-var isDown = false;
+var down = false;
 
 main.onmousedown = function (e) {
     e.preventDefault();
@@ -91,11 +91,11 @@ main.onmousedown = function (e) {
     x0 = e.clientX;
     y0 = e.clientY;
 
-    isDown = true;
+    down = true;
 }
 
 window.onmousemove = function (e) {
-    if (isDown) {
+    if (down) {
         var x = e.clientX;
         var y = e.clientY;
 
@@ -108,5 +108,5 @@ window.onmousemove = function (e) {
 }
 
 main.onmouseup = function () {
-    isDown = false;
-}  
+    down = false;
+} 
