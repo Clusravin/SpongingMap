@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,AAAC,CACN,QAAQ,CAAE,MAAM,CACnB",
+    "mappings": "AAAA,AAAA,SAAS,AAAC,CACN,KAAK,CAAE,IAAI,CAEX,QAAQ,CAAE,MAAM,CAKnB,AARD,AAKI,SALK,CAKL,WAAW,AAAC,CACR,MAAM,CAAE,IAAI,CACf",
     "sources": [
         "../namelist.scss"
     ],
