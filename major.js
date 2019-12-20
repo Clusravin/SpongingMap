@@ -52,11 +52,11 @@ function writePeopleList(i) {
 var catalog = document.querySelector("#major>#catalog");
 
 function onloadOther() {
-    fillUp(catalog, 0);
-    fillUp(content, 0);
+    fillUp(catalog, 112);
+    fillUp(content, 128);
 }
 
 function onresizeOther() {
-    fillUp(catalog, 0);
-    fillUp(content, 0);
+    fillUp(catalog, 112);
+    fillUp(content, 128);
 }
