@@ -20,7 +20,7 @@ function applyButtonEffect(clss) {
 var content = document.querySelector("#major>#content");
 
 function showMajor(clss) {
-    content.style.visibility = "visible";
+    content.style.display = "block";
 
     for (var i = 0; i < major.length; i++) {
         if (major[i].abbr == clss) {
