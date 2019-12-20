@@ -39,6 +39,22 @@ html {
         }
     }
 
+    h3 {
+        font-size: 1.2rem;
+
+        @media (max-width: $max-width-1) {
+            font-size: 1rem;
+        }
+    }
+
+    p {
+        font-size: 1rem;
+
+        @media (max-width: $max-width-1) {
+            font-size: 0.8rem;
+        }
+    }
+
     a {
         text-decoration: none;
     }
@@ -245,6 +261,8 @@ html {
             }
 
             .individual {
+                margin: 0.5rem;
+
                 display: flex;
                 align-items: center;
     
