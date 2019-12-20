@@ -38,7 +38,7 @@ function insertNav() {
     <a href="namelist.html">花名册</a>\
     </li>\
     <li class="tablet-border-bottom">\
-    <a href="major.html">专业</a>\
+    <a href="major.html">专业分布</a>\
     </li>\
     <li class="tablet-border-bottom">\
     <a href="http://clusravin.gitee.io/classweekly" target="_blank">往期周记</a>\
