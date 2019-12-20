@@ -1,13 +1,18 @@
 #major {
-	display: flex;
-
 	overflow: hidden;
 
+	display: flex;
+	align-items: flex-start;
+
 	#catalog {
+		background-color: #fff;
+
 		display: flex;
 		flex-direction: column;
 
 		button {
+			padding: 0.2rem 1rem;
+
 			border-style: none;
 
 			background-color: #fff;
@@ -15,9 +20,12 @@
 	}
 
 	#content {
-		border-style: none none none solid;
-		border-width: 2px;
-		border-color: #eee;
+		width: 20rem;
+		
+		padding: 1rem;
+		margin: 0 0 0 1rem;
+
+		background-color: #fff;
 
 		overflow: scroll;
 
