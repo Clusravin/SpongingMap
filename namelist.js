@@ -8,8 +8,14 @@ function showNamelist() {
     }
 }
 
+var namelist = document.querySelector("#namelist");
+
 function onloadOther() {
     showNamelist();
+
+    fillUp(namelist, 64);
 }
 
-function onresizeOther() {}
+function onresizeOther() {
+    fillUp(namelist, 64);
+}
