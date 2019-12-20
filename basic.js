@@ -136,7 +136,7 @@ function updateMenu() {
 function fillUp(container, margin) {
     var height = document.documentElement.clientHeight;
     
-    container.style.height = height - margin + "px";
+    container.style.height = height + (navHeightFolded[2].substring(0, 1) - navHeightFolded[widthIndex].substring(0, 1)) * 16 - margin + "px";
 }
 
 window.onload = function () {
