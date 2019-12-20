@@ -1,15 +1,15 @@
 var infoContainer = document.querySelector("#info");
 
 function onloadOther() {
-    fillUp(infoContainer);
+    fillUp(infoContainer, 112);
 }
 
 function onresizeOther() {
-    fillUp(map[0]);
-    fillUp(map[1]);
-    fillUp(map[2]);
+    fillUp(map[0], 0);
+    fillUp(map[1], 0);
+    fillUp(map[2], 0);
 
-    fillUp(infoContainer);
+    fillUp(infoContainer, 112);
 }
 
 function showInfo(clss) {

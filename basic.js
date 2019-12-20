@@ -1,7 +1,7 @@
-let navHeightFolded = "3rem";
-let navHeightExpanded = "15.1rem";
+let navHeightFolded = ["3rem", "4rem", "4rem"];
+let navHeightExpanded = ["15.1rem", "20.1rem"];
 let navRightHeightFolded = "0";
-let navRightHeightExpanded = "12rem";
+let navRightHeightExpanded = ["12rem", "16rem"];
 let navRightHeightDefault = "1.5rem";
 
 var nav = document.querySelector("#nav");
@@ -10,7 +10,7 @@ insertNav();
 
 var navLeft = document.querySelector("#nav-left");
 var navRight = document.querySelector("#nav-right");
-
+ 
 var copyright = document.querySelector("#copyright");
 
 insertCopyright();
@@ -64,9 +64,29 @@ function insertCopyright() {
     }
 }
 
+let tabletMaxWidth = 992;
+let mobileMaxWidth = 768;
+
+var widthIndex = 0;
+
+getWidthIndex();
+
+function getWidthIndex() {
+    var width = document.documentElement.clientWidth;
+
+    if (width > tabletMaxWidth) {
+        widthIndex = 2;
+    }
+    else if (width > mobileMaxWidth) {
+        widthIndex = 1;
+    }
+    else {
+        widthIndex = 0;
+    }
+}
 
 function menuIsFolded() {
-    if (nav.style.height == navHeightFolded) {
+    if (nav.style.height == navHeightFolded[widthIndex]) {
         return true;
     }
     else {
@@ -75,13 +95,15 @@ function menuIsFolded() {
 }
 
 function expandMenu() {
-    nav.style.height = navHeightExpanded;
-    navRight.style.height = navRightHeightExpanded;
+    nav.style.height = navHeightExpanded[widthIndex];
+    navLeft.style.height = navHeightFolded[widthIndex];
+    navRight.style.height = navRightHeightExpanded[widthIndex];
     navRight.style.visibility = "visible";
 }
 
 function foldMenu() {
-    nav.style.height = navHeightFolded;
+    nav.style.height = navHeightFolded[widthIndex];
+    navLeft.style.height = navHeightFolded[widthIndex];
     navRight.style.height = navRightHeightFolded;
     navRight.style.visibility = "hidden";
 }
@@ -96,11 +118,10 @@ function toggleMenu() {
 }
 
 function updateMenu() {
-    let tabletMaxWidth = 992;
-
     var width = document.documentElement.clientWidth;
 
-    nav.style.height = navHeightFolded;
+    nav.style.height = navHeightFolded[widthIndex];
+    navLeft.style.height = navHeightFolded[widthIndex];
 
     if (width > tabletMaxWidth) {
         navRight.style.height = navRightHeightDefault;
@@ -112,34 +133,41 @@ function updateMenu() {
     }
 }
 
-function fillUp(container) {
+function fillUp(container, margin) {
     var height = document.documentElement.clientHeight;
-
-    container.style.height = height + 10 + "px";
+    
+    container.style.height = height - margin + "px";
+    console.log(height + " " + container.style.height);
 }
 
-window.onload = function() {
-    fillUp(main);
+window.onload = function () {
+    getWidthIndex();
+
+    fillUp(main, 0);
 
     onloadOther();
 }
 
-window.onresize = function() {
-    fillUp(main);
-    
+window.onresize = function () {
+    getWidthIndex();
+
     updateMenu();
+
+    fillUp(main, 0);
 
     onresizeOther();
 }
 
-window.onscroll = function() {
-    fillUp(main);
+window.onscroll = function () {
+    fillUp(main, 0);
 }
 
-window.onorientationchange = function() {
-    fillUp(main);
-    
+window.onorientationchange = function () {
+    getWidthIndex();
+
     updateMenu();
+    
+    fillUp(main, 0);
 
     onresizeOther();
 }
