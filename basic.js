@@ -137,7 +137,6 @@ function fillUp(container, margin) {
     var height = document.documentElement.clientHeight;
     
     container.style.height = height - margin + "px";
-    console.log(height + " " + container.style.height);
 }
 
 window.onload = function () {
