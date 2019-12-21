@@ -1,8 +1,8 @@
 var classShown = "";
 
 function applyButtonEffect(clss) {
-    var down = { width: "11rem", height: "2.4rem", margin: "0.2rem 0", border: "solid none solid solid" };
-    var up = { width: "10rem", height: "1.4rem", margin: "0", border: "none" }
+    var down = { width: "11rem", height: "2.8rem", margin: "0.3rem 0", border: "solid none solid solid" };
+    var up = { width: "10rem", height: "1.8rem", margin: "0", border: "none" }
 
     if (classShown != "") {
         var previousButton = document.querySelector("#major>#catalog>#majorPart>#" + classShown);

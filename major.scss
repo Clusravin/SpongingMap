@@ -1,3 +1,13 @@
+$bg-dark-primary: #512da8;
+$bg-primary: #673ab7;
+$bg-light-primary: #d1c4e9;
+$txt-light-primary: #ffffff;
+$txt-dark-secondary: #616161;
+
+$max-width-1: 768px;
+$max-width-2: 992px;
+$max-width-3: 1200px;
+
 #major {
 	overflow: hidden;
 
@@ -23,15 +33,19 @@
 
 			button {
 				width: 10rem;
-				height: 1.4rem;
+				height: 1.8rem;
 
-				padding: 0.2rem 1rem;
-
-				border-width: 5px 0 5px 5px;
-				border-color: #d1c4e9;
+				border-width: 6px 0 6px 6px;
+				border-color: $bg-light-primary;
 				border-style: none;
 
+				font-size: 1rem;
+
 				background-color: #fff;
+
+				@media (max-width: $max-width-1) {
+					font-size: 0.8rem;
+				}
 			}
 		}
 	}
