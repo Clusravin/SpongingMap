@@ -5,27 +5,37 @@
 	align-items: flex-start;
 
 	#catalog {
-		padding: 1rem 0 2rem 0;
+		width: 10rem;
 
 		background-color: #fff;
 
-		overflow: scroll;
+		overflow: visible;
 
-		display: flex;
-		flex-direction: column;
+		#majorPart {
+			width: 11rem;
 
-		button {
-			padding: 0.2rem 1rem;
+			padding: 1rem 0 2rem 0;
 
-			border-style: none;
+			overflow: scroll;
 
-			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+
+			button {
+				width: 10rem;
+
+				padding: 0.2rem 1rem;
+
+				border-style: none;
+
+				background-color: #fff;
+			}
 		}
 	}
 
 	#content {
 		width: 20rem;
-		
+
 		padding: 1.5rem 1.5rem 2.5rem 1.5rem;
 		margin: 0 0 0 1rem;
 

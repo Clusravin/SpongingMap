@@ -1,20 +1,26 @@
 var classShown = "";
 
 function applyButtonEffect(clss) {
-    var dark = "#616161";
-    var light = "#ffffff";
+    var down = { background: "#616161", color: "#ffffff", width: "11rem", height: "2rem", fontSize: "1rem" };
+    var up = { background: "#ffffff", color: "#000000", width: "10rem", height: "1.4rem", fontSize: "0.5rem" }
 
     if (classShown != "") {
-        var previousButton = document.querySelector("#major>#catalog>#" + classShown);
+        var previousButton = document.querySelector("#major>#catalog>#majorPart>#" + classShown);
 
-        previousButton.style.background = light;
-        previousButton.style.color = "black";
+        previousButton.style.background = up.background;
+        previousButton.style.color = up.color;
+        previousButton.style.width = up.width;
+        previousButton.style.height = up.height;
+        previousButton.style.fontSize = up.fontSize;
     }
 
-    var button = document.querySelector("#major>#catalog>#" + clss);
-    
-    button.style.background = dark;
-    button.style.color = light;    
+    var button = document.querySelector("#major>#catalog>#majorPart>#" + clss);
+
+    button.style.background = down.background;
+    button.style.color = down.color;
+    button.style.width = down.width;
+    button.style.height = down.height;
+    button.style.fontSize = down.fontSize;
 }
 
 var content = document.querySelector("#major>#content");
@@ -50,13 +56,16 @@ function writePeopleList(i) {
 }
 
 var catalog = document.querySelector("#major>#catalog");
+var majorPart = document.querySelector("#major>#catalog>#majorPart");
 
 function onloadOther() {
-    fillUp(catalog, 112);
+    fillUp(catalog, 64);
+    fillUp(majorPart, 112);
     fillUp(content, 128);
 }
 
 function onresizeOther() {
-    fillUp(catalog, 112);
+    fillUp(catalog, 64);
+    fillUp(majorPart, 112);
     fillUp(content, 128);
 }
