@@ -1,26 +1,24 @@
 var classShown = "";
 
 function applyButtonEffect(clss) {
-    var down = { background: "#616161", color: "#ffffff", width: "11rem", height: "2rem", fontSize: "1rem" };
-    var up = { background: "#ffffff", color: "#000000", width: "10rem", height: "1.4rem", fontSize: "0.5rem" }
+    var down = { width: "11rem", height: "2.4rem", margin: "0.2rem 0", border: "solid none solid solid" };
+    var up = { width: "10rem", height: "1.4rem", margin: "0", border: "none" }
 
     if (classShown != "") {
         var previousButton = document.querySelector("#major>#catalog>#majorPart>#" + classShown);
 
-        previousButton.style.background = up.background;
-        previousButton.style.color = up.color;
         previousButton.style.width = up.width;
         previousButton.style.height = up.height;
-        previousButton.style.fontSize = up.fontSize;
+        previousButton.style.margin = up.margin;
+        previousButton.style.borderStyle = up.border;
     }
 
     var button = document.querySelector("#major>#catalog>#majorPart>#" + clss);
 
-    button.style.background = down.background;
-    button.style.color = down.color;
     button.style.width = down.width;
     button.style.height = down.height;
-    button.style.fontSize = down.fontSize;
+    button.style.margin = down.margin;
+    button.style.borderStyle = down.border;
 }
 
 var content = document.querySelector("#major>#content");
