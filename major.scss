@@ -14,6 +14,12 @@ $max-width-3: 1200px;
 	display: flex;
 	align-items: flex-start;
 
+	@media (max-width: $max-width-1) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
 	#catalog {
 		width: 10rem;
 
@@ -21,12 +27,29 @@ $max-width-3: 1200px;
 
 		overflow: visible;
 
+		@media (max-width: $max-width-1) {
+			width: 100%;
+		}
+
 		#majorPart {
 			width: 11rem;
 
 			padding: 1rem 0 2rem 0;
 
 			overflow: scroll;
+
+			@media (max-width: $max-width-1) {
+				width: 100%;
+
+				padding: 1rem;
+
+				border-style: none none solid none;
+				border-width: 2px;
+				border-color: $bg-light-primary;
+
+				display: flex;
+				flex-wrap: wrap;
+			}
 
 			button {
 				width: 10rem;
@@ -41,6 +64,12 @@ $max-width-3: 1200px;
 				background-color: #fff;
 
 				@media (max-width: $max-width-1) {
+					width: auto;
+
+					padding: 0 1rem;
+
+					border-width: 2px;
+
 					font-size: 0.8rem;
 				}
 			}
@@ -58,6 +87,10 @@ $max-width-3: 1200px;
 		overflow: scroll;
 
 		display: none;
+
+		@media (max-width: $max-width-1) {
+			width: 100%;
+		}
 
 		button {
 			border-style: none;

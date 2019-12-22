@@ -1,7 +1,7 @@
 function addPeopleInfo(container, i, schoolIncluded, majorIncluded, positionIncluded, subjectIncluded) {
     container.innerHTML += '<div class="individual">\
     <img id="photo" src="images/profile photo/' + i + '.jpeg">\
-    <div>\
+    <div id="right">\
     <h3 id="name">' + people[i].name + '</h3>\
     </div>\
     </div>';
