@@ -75,26 +75,29 @@ var majorContainer = document.querySelector("#major");
 var catalog = document.querySelector("#major>#catalog");
 var majorPart = document.querySelector("#major>#catalog>#majorPart");
 
-function onloadOther() {
+function fillUpContainer() {
     if (widthIndex == 0) {
         fillUp(majorContainer, 64);
+
+        catalog.style.height = "auto";
+        majorPart.style.height = "auto";
     }
     else {
         fillUp(catalog, 64);
         fillUp(majorPart, 112);
     }
+}
+
+function onloadOther() {
+    fillUpContainer();
 
     fillUp(content, 128);
 }
 
 function onresizeOther() {
-    if (widthIndex == 0) {
-        fillUp(majorContainer, 64);
-    }
-    else {
-        fillUp(catalog, 64);
-        fillUp(majorPart, 112);
-    }
+    fillUpContainer();
+
+    applyButtonEffect(classShown);
 
     fillUp(content, 128);
 }

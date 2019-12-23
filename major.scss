@@ -38,6 +38,8 @@ $max-width-3: 1200px;
 
 			overflow: scroll;
 
+			display: block;
+
 			@media (max-width: $max-width-1) {
 				width: 100%;
 
