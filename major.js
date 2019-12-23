@@ -97,7 +97,9 @@ function onloadOther() {
 function onresizeOther() {
     fillUpContainer();
 
-    applyButtonEffect(classShown);
+    if (classShown != "") {
+        applyButtonEffect(classShown);
+    }
 
     fillUp(content, 128);
 }
