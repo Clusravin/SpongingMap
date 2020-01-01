@@ -6,36 +6,38 @@ function applyButtonEffect(clss) {
     var up = [{ width: "10rem", height: "1.8rem", margin: "0", border: "none" },
     { width: "auto", height: "1.8rem", margin: "0", border: "none" }];
 
-    if (classShown != "") {
-        var previousButton = document.querySelector("#major>#catalog>#majorPart>#" + classShown);
+    var allButton = document.querySelectorAll("#major>#catalog>#majorPart>button");
 
+    for (i = 0; i < allButton.length; i++) {
         if (widthIndex == 0) {
-            previousButton.style.width = up[1].width;
-            previousButton.style.height = up[1].height;
-            previousButton.style.margin = up[1].margin;
-            previousButton.style.borderStyle = up[1].border;
+            allButton[i].style.width = up[1].width;
+            allButton[i].style.height = up[1].height;
+            allButton[i].style.margin = up[1].margin;
+            allButton[i].style.borderStyle = up[1].border;
         }
         else {
-            previousButton.style.width = up[0].width;
-            previousButton.style.height = up[0].height;
-            previousButton.style.margin = up[0].margin;
-            previousButton.style.borderStyle = up[0].border;
+            allButton[i].style.width = up[0].width;
+            allButton[i].style.height = up[0].height;
+            allButton[i].style.margin = up[0].margin;
+            allButton[i].style.borderStyle = up[0].border;
         }
     }
 
-    var button = document.querySelector("#major>#catalog>#majorPart>#" + clss);
+    if (clss != "") {
+        var button = document.querySelector("#major>#catalog>#majorPart>#" + clss);
 
-    if (widthIndex == 0) {
-        button.style.width = down[1].width;
-        button.style.height = down[1].height;
-        button.style.margin = down[1].margin;
-        button.style.borderStyle = down[1].border;
-    }
-    else {
-        button.style.width = down[0].width;
-        button.style.height = down[0].height;
-        button.style.margin = down[0].margin;
-        button.style.borderStyle = down[0].border;
+        if (widthIndex == 0) {
+            button.style.width = down[1].width;
+            button.style.height = down[1].height;
+            button.style.margin = down[1].margin;
+            button.style.borderStyle = down[1].border;
+        }
+        else {
+            button.style.width = down[0].width;
+            button.style.height = down[0].height;
+            button.style.margin = down[0].margin;
+            button.style.borderStyle = down[0].border;
+        }
     }
 }
 
@@ -97,9 +99,7 @@ function onloadOther() {
 function onresizeOther() {
     fillUpContainer();
 
-    if (classShown != "") {
-        applyButtonEffect(classShown);
-    }
+    applyButtonEffect(classShown);
 
     fillUp(content, 128);
 }
