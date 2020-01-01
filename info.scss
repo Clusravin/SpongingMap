@@ -87,6 +87,10 @@ $max-width-3: 1200px;
 		flex-direction: column;
 
 		overflow: scroll;
+
+		.individual {
+			margin: 0.2rem;
+		}
 	}
 
 	#hideInfo {
