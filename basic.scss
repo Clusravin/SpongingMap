@@ -16,9 +16,8 @@ $bg-light-primary: #d1c4e9;
 $txt-light-primary: #ffffff;
 $txt-dark-secondary: #616161;
 
-$max-width-1: 768px;
-$max-width-2: 992px;
-$max-width-3: 1200px;
+$max-width-1: 480px;
+$max-width-2: 880px;
 
 html {
 	margin: 0;
@@ -166,7 +165,7 @@ html {
 					justify-content: center;
 
 					@media (max-width: $max-width-2) {
-						width: 30%;
+						width: 15rem;
 						height: 0;
 
 						visibility: hidden;
@@ -294,8 +293,8 @@ html {
 			justify-content: center;
 
 			#copyright {
-				width: 8rem;
-				height: 1.2rem;
+				width: 8.5rem;
+				height: 1.3rem;
 
 				background-color: $txt-dark-secondary;
 

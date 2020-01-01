@@ -64,8 +64,8 @@ function insertCopyright() {
     }
 }
 
-let tabletMaxWidth = 992;
-let mobileMaxWidth = 768;
+let tabletMaxWidth = 880;
+let mobileMaxWidth = 480;
 
 var widthIndex = 0;
 
