@@ -37,20 +37,32 @@ function updateMap() {
             map[i].style.display = "none";
         }
     }
-    
+
+    var width = document.documentElement.clientWidth;
+    var height = document.documentElement.clientHeight;
+
+    var top = -(height - 64) / 2;
+    var left = -width / 2;
+
     switch (level) {
         case 0:
-            map[0].scrollTop = 3000;
-            map[0].scrollLeft = 1500;
+            top += 3550;
+            left += 2450;
+            break;
 
         case 1:
-            map[1].scrollTop = 300;
-            map[1].scrollLeft = 1000;
-            
+            top += 600;
+            left += 1300;
+            break;
+    
         case 2:
-            map[2].scrollTop = 200;
-            map[2].scrollLeft = 1000;
+            top += 600;
+            left += 2000;
+            break;
     }
+
+    map[level].scrollTop = top;
+    map[level].scrollLeft = left;    
 }
 
 function zoomOut() {
