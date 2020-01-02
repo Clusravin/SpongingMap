@@ -58,23 +58,6 @@ $max-width-2: 880px;
 		#right {
 			display: flex;
 			flex-direction: column;
-
-			#bottom {
-				display: flex;
-
-				#link {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
-					img {
-						width: 1rem;
-						height: 1rem;
-
-						margin: 0 0 0 0.5rem;
-					}
-				}
-			}
 		}
 	}
 

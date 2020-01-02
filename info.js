@@ -32,12 +32,9 @@ function writeSchoolInfo(i) {
     schoolPart.innerHTML = '<img id="emblem" src="images/school emblem/' + i + '.jpeg">\
     <div id="right">\
     <h3 id="name">' + school[i].name + '</h3>\
-    <div id="bottom">\
+    <a href="' + school[i].url + '" target="_blank">\
     <p id="location">' + school[i].location + '</p>\
-    <a id="link" href="' + school[i].url + '" target="_blank">\
-    <img src="images/location.svg" alt="location">\
     </a>\
-    </div>\
     </div>';
 }
 
