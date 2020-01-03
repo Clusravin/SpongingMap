@@ -10,10 +10,6 @@ insertNav();
 
 var navLeft = document.querySelector("#nav-left");
 var navRight = document.querySelector("#nav-right");
- 
-var copyright = document.querySelector("#copyright");
-
-insertCopyright();
 
 var main = document.querySelector(".main");
 
@@ -50,18 +46,6 @@ function insertNav() {
     </li>\
     </ul>\
     </div>';
-}
-
-function insertCopyright() {
-    var date = new Date;
-    var year = date.getFullYear();
-
-    if (year == 2019) {
-        copyright.innerHTML = "<p>&copy; 2019 范子睿</p>";
-    }
-    else {
-        copyright.innerHTML = "<p>&copy; 2019-" + year + " 范子睿</p>";
-    }
 }
 
 let tabletMaxWidth = 880;

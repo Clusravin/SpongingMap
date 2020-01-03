@@ -281,33 +281,5 @@ html {
 				}
 			}
 		}
-
-		footer {
-			width: 100%;
-
-			position: fixed;
-			bottom: 0;
-			z-index: 1;
-
-			display: flex;
-			justify-content: center;
-
-			#copyright {
-				width: 8.5rem;
-				height: 1.3rem;
-
-				background-color: $txt-dark-secondary;
-
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				p {
-					font-size: 0.7rem;
-
-					color: #fff;
-				}
-			}
-		}
 	}
 }
