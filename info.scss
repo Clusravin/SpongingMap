@@ -82,5 +82,11 @@ $max-width-2: 880px;
 		position: absolute;
 		right: 1rem;
 		top: 4rem;
+
+		img {
+			@media (max-width: $max-width-1) {
+				width: 0.8rem;
+			}
+		}
 	}
 }
